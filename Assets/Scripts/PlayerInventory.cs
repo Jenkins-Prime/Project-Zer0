@@ -3,25 +3,25 @@ using System.Collections;
 
 public class PlayerInventory : MonoBehaviour {
 
-	private int health = 3;
+	public int health = 3;
 	private int maxHealth = 3; //Import from PlayerStats script
-	private int lives = 2; //Import from PlayerStats script?
+	public int lives = 2; //Import from PlayerStats script?
 	private int maxLives = 10; //Import from PlayerStats script
-	private int ammo = 0; //Import from PlayerStats script
+	public int ammo = 0; //Import from PlayerStats script
 	private int maxAmmo = 20; //Import from PlayerStats script
 
 	//Sparks
-	private int sparkCount = 0;  //Import from PlayerStats script for this level
+	public int sparkCount = 0;  //Import from PlayerStats script for this level
 	private int totalSparks = 10; //Import from PlayerStats script for this level
 	//Scrap
-	private int scrapCount = 0;  //Import from PlayerStats script for this level
+	public int scrapCount = 0;  //Import from PlayerStats script for this level
 	private int totalScrap = 100; //Import from PlayerStats script for this level
 	//Gold Coins
-	private int goldCoinCount = 0;  //Import from PlayerStats script for this level
+	public int goldCoinCount = 0;  //Import from PlayerStats script for this level
 	private int totalGoldCoins = 5; //Import from PlayerStats script for this level
 	//Heart Key - Heart Cage
-	private bool heartKeyOwned = false;  //Import from PlayerStats script for this level
-	private bool heartCageUnlocked = false;  //Import from PlayerStats script for this level
+	public bool heartKeyOwned = false;  //Import from PlayerStats script for this level
+	public bool heartCageUnlocked = false;  //Import from PlayerStats script for this level
 
 
 	// Use this for initialization
