@@ -13,6 +13,7 @@ GameObject:
   - 135: {fileID: 13550658}
   - 95: {fileID: 9560360}
   - 114: {fileID: 11478382}
+  - 122: {fileID: 12296530}
   m_Layer: 0
   m_Name: Spark
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157980}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: 1.86000001, y: .439999998, z: 6.26200008}
+  m_LocalPosition: {x: -8.34000015, y: 3.69000006, z: 7.26999998}
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,6 +92,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dfa5af957a4724097f5633655ce012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!122 &12296530
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157980}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278253823
+  m_Size: .899999976
 --- !u!135 &13550658
 SphereCollider:
   m_ObjectHideFlags: 1
