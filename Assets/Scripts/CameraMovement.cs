@@ -2,28 +2,22 @@
 using System.Collections;
 
 public class CameraMovement : MonoBehaviour {
-	Transform player;	
-	Quaternion targetLook;
-	Vector3 targetMove;
-	public float smoothLook = 7.0f;
-	public float smoothMove = 4.0f;
-	public float distanceFromPlayer = 3.0f;
-	public float cameraHeight = 2.0f;
+	[SerializeField]
+	float distanceAway;
+	[SerializeField]
+	float distanceUp;
+	[SerializeField]
+	float smooth;
+	Transform follow;
+	Vector3 targetPosition;
 
-	void Awake() {
-
-	}
-
-	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player").transform;
+		follow = GameObject.FindGameObjectWithTag ("CameraFollow").transform;
 	}
-	
-	void FixedUpdate () {
-		targetLook = Quaternion.LookRotation (player.position -transform.position);
-		transform.rotation = Quaternion.Slerp (transform.rotation, targetLook, smoothLook * Time.deltaTime);
 
-		targetMove = player.position + player.rotation * new Vector3 (0, cameraHeight, -distanceFromPlayer);
-		transform.position = Vector3.Lerp(transform.position, targetMove, smoothMove * Time.deltaTime);
+	void FixedUpdate() { //Probably needs to be changed to LateUpdate
+		targetPosition = follow.position + follow.up * distanceUp - follow.forward * distanceAway;
+		transform.position = Vector3.Lerp (transform.position, targetPosition, Time.deltaTime * smooth);
+		transform.LookAt(follow);
 	}
 }
