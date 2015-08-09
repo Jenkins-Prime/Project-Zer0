@@ -2,16 +2,16 @@
 using System.Collections;
 
 public class PickupHeartCage : MonoBehaviour {
-	PlayerInventory inventory;
-	
+	PlayerStatus status;
+
 	// Use this for initialization
 	void Start () {
-		inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+		status = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
 	}
 	
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player") {
-			if(inventory.CollectHeartCage() == true)
+			if(status.CollectHeartCage() == true)
 				gameObject.SetActive(false);
 		}
 	}

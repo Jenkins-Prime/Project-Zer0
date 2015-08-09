@@ -1,39 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerInventory : MonoBehaviour {
-
+public class PlayerStatus : MonoBehaviour {
 	[SerializeField] int health = 3;
-	private int maxHealth = 3; //Import from PlayerStats script
-	[SerializeField] int lives = 2; //Import from PlayerStats script?
-	private int maxLives = 10; //Import from PlayerStats script
-	[SerializeField] int ammo = 0; //Import from PlayerStats script
-	private int maxAmmo = 20; //Import from PlayerStats script
+	int maxHealth = 3;
+	[SerializeField] int lives = 2;
+	int maxLives = 10;
+	[SerializeField] int ammo = 0;
+	int maxAmmo = 20;
+	
+	[SerializeField] int sparkCount = 0;
+	int totalSparks = 10;
+	[SerializeField] int scrapCount = 0;
+	int totalScrap = 100;
+	[SerializeField] int goldCoinCount = 0;
+	int totalGoldCoins = 5;
+	[SerializeField] bool heartKeyOwned = false;
+	[SerializeField] bool heartCageUnlocked = false;
 
-	//Sparks
-	[SerializeField] int sparkCount = 0;  //Import from PlayerStats script for this level
-	private int totalSparks = 10; //Import from PlayerStats script for this level
-	//Scrap
-	[SerializeField] int scrapCount = 0;  //Import from PlayerStats script for this level
-	private int totalScrap = 100; //Import from PlayerStats script for this level
-	//Gold Coins
-	[SerializeField] int goldCoinCount = 0;  //Import from PlayerStats script for this level
-	private int totalGoldCoins = 5; //Import from PlayerStats script for this level
-	//Heart Key - Heart Cage
-	[SerializeField] bool heartKeyOwned = false;  //Import from PlayerStats script for this level
-	[SerializeField] bool heartCageUnlocked = false;  //Import from PlayerStats script for this level
-
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-	
 	public bool GainHealth(int amount) {
 		if (health == maxHealth) {
 			return false;
@@ -49,7 +33,7 @@ public class PlayerInventory : MonoBehaviour {
 
 	public void LoseHealth(int amount) {
 		health -= amount;
-		if (health <= 0) {
+		if (health < 0) {
 			LoseLife();
 		}
 	}
@@ -76,10 +60,11 @@ public class PlayerInventory : MonoBehaviour {
 	public void LoseLife() {
 		lives--;
 		//Die
+		/*
 		if (lives <= 0) {
 			//Do Gameover actions
 			lives = 2;
-		}
+		}*/
 		//Reset Stuff
 	}
 
@@ -95,14 +80,14 @@ public class PlayerInventory : MonoBehaviour {
 			return true;
 		}
 	}
-
+	
 	public void LoseAmmo(int amount) {
 		ammo -= amount;
 		if (ammo < 0) {
 			ammo = 0;
 		}
 	}
-
+	
 	public void CollectSpark() {
 		sparkCount++;
 		//Do GUI stuff, animation
@@ -110,7 +95,7 @@ public class PlayerInventory : MonoBehaviour {
 			//Do GUI stuff, animation for completed Sparks
 		}
 	}
-
+	
 	public void CollectScrap() {
 		scrapCount++;
 		//Do GUI stuff, animation
@@ -118,7 +103,7 @@ public class PlayerInventory : MonoBehaviour {
 			//Do GUI stuff, animation for completed Scrap
 		}
 	}
-
+	
 	public void CollectGoldCoin() {
 		goldCoinCount++;
 		//Do GUI stuff, animation
@@ -126,51 +111,45 @@ public class PlayerInventory : MonoBehaviour {
 			//Do GUI stuff, animation for completed GoldCoins
 		}
 	}
-
+	
 	public void CollectHeartKey() {
 		heartKeyOwned = true;
 		//Do GUI stuff, animation
 	}
-
+	
 	public bool CollectHeartCage() {
 		if (heartKeyOwned == true) {
 			heartKeyOwned = false;
 			heartCageUnlocked = true;
-
+			
 			IncreaseMaxHealth ();
 			return true;
 		}
 		return false;
 	}
-
+	
 	//==========Getter Functions===========
 	public int Health {
 		get {
 			return health;
 		}
 	}
-
+	
 	public int MaxHealth {
 		get {
 			return maxHealth;
 		}
 	}
-
+	
 	public int Lives {
 		get {
 			return lives;
 		}
 	}
-
+	
 	public int Ammo {
 		get {
 			return ammo;
-		}
-	}
-
-	public int MaxAmmo {
-		get {
-			return maxAmmo;
 		}
 	}
 
@@ -179,25 +158,25 @@ public class PlayerInventory : MonoBehaviour {
 			return sparkCount;
 		}
 	}
-
+	
 	public int ScrapCount {
 		get {
 			return scrapCount;
 		}
 	}
-
+	
 	public int GoldCoinCount {
 		get {
 			return goldCoinCount;
 		}
 	}
-
+	
 	public bool HeartKeyOwned {
 		get {
 			return heartKeyOwned;
 		}
 	}
-
+	
 	public bool HeartCageUnlocked {
 		get {
 			return heartCageUnlocked;

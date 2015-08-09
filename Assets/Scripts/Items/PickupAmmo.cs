@@ -2,17 +2,17 @@
 using System.Collections;
 
 public class PickupAmmo : MonoBehaviour {
-	PlayerInventory inventory;
-	[SerializeField]
-	public int amount = 1;
+	PlayerStatus status;
+	[SerializeField] int amount = 1;
+
 	// Use this for initialization
 	void Start () {
-		inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+		status = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
 	}
 	
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player") {
-			if(inventory.GainAmmo(amount) == true) {
+			if(status.GainAmmo(amount) == true) {
 				Invoke("ReActivate", 5);
 				gameObject.SetActive(false);
 			}

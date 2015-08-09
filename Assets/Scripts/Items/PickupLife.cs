@@ -2,15 +2,17 @@
 using System.Collections;
 
 public class PickupLife : MonoBehaviour {
-	PlayerInventory inventory;
+	PlayerStatus status;
+	[SerializeField] int amount = 1;
+
 	// Use this for initialization
 	void Start () {
-		inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+		status = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
 	}
 	
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player") {
-			if(inventory.GainLife(1) == true) {
+			if(status.GainLife(amount) == true) {
 				Invoke("ReActivate", 5);
 				gameObject.SetActive(false);
 			}

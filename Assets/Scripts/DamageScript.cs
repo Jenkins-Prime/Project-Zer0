@@ -1,21 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Damage : MonoBehaviour {
+public class DamageScript : MonoBehaviour {
 	[SerializeField] int damage = 1;
 	float hitDelay = 2.0f;
 	float hitAllowed = 0f;
-	PlayerInventory inv;
+	PlayerStatus status;
 
 	// Use this for initialization
 	void Start () {
-		inv = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+		status = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
 	}
-
+	
 	void OnCollisionStay(Collision other) {
 		if (other.gameObject.tag == "Player") {
 			if(Time.fixedTime > hitAllowed) {
-				inv.LoseHealth(damage);
+				status.LoseHealth(damage);
 				hitAllowed = Time.fixedTime + hitDelay;
 			}
 		}

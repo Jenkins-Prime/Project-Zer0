@@ -2,16 +2,16 @@
 using System.Collections;
 
 public class PickupSpark : MonoBehaviour {
-	PlayerInventory inventory;
+	PlayerStatus status;
 
 	// Use this for initialization
 	void Start () {
-		inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+		status = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
 	}
 	
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player") {
-			inventory.CollectSpark();
+			status.CollectSpark();
 			gameObject.SetActive(false);
 		}
 	}
