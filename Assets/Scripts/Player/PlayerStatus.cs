@@ -11,6 +11,7 @@ public class PlayerStatus : MonoBehaviour {
 	
 	[SerializeField] int sparkCount = 0;
 	int totalSparks = 10;
+	[SerializeField] bool[] sparkiesCollected = {false, false, false, false, false};
 	[SerializeField] int scrapCount = 0;
 	int totalScrap = 100;
 	[SerializeField] int goldCoinCount = 0;
@@ -93,6 +94,20 @@ public class PlayerStatus : MonoBehaviour {
 		//Do GUI stuff, animation
 		if (sparkCount == totalSparks) {
 			//Do GUI stuff, animation for completed Sparks
+		}
+	}
+
+	public void CollectSparkie(int index) {
+		sparkiesCollected[index] = true;
+		bool sparkiesComplete = true;
+		for(int i=0; i< 5; i++) {
+			if(sparkiesCollected[i] == false) {
+				sparkiesComplete = false;
+				break;
+			}
+		}
+		if (sparkiesComplete) {
+			CollectSpark();
 		}
 	}
 	

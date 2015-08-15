@@ -1,0 +1,115 @@
+fileFormatVersion: 2
+guid: cfe97904a24e6cd4abcfa2686054deb6
+timeCreated: 1439643856
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Big
+    100004: Electron_A
+    100006: Electron_B
+    400000: //RootNode
+    400002: Big
+    400004: Electron_A
+    400006: Electron_B
+    2300000: Big
+    2300002: Electron_A
+    2300004: Electron_B
+    3300000: Big
+    3300002: Electron_A
+    3300004: Electron_B
+    4300000: Electron_B
+    4300002: Electron_A
+    4300004: Big
+    7400000: Electron_B|BezierCircleAAction
+    7400002: Electron_B|BezierCircleBAction
+    7400004: Electron_B|BigAction
+    7400006: Electron_B|CameraAction
+    7400008: Electron_B|Electron_AAction
+    7400010: Electron_B|Electron_BAction
+    7400012: Electron_B|LampAction
+    7400014: Electron_B|Orbit
+    7400016: Electron_B|vertiAction
+    7400018: Electron_A|BezierCircleAAction
+    7400020: Electron_A|BezierCircleBAction
+    7400022: Electron_A|BigAction
+    7400024: Electron_A|CameraAction
+    7400026: Electron_A|Electron_AAction
+    7400028: Electron_A|Electron_BAction
+    7400030: Electron_A|LampAction
+    7400032: Electron_A|Orbit
+    7400034: Electron_A|vertiAction
+    7400036: Big|BezierCircleAAction
+    7400038: Big|BezierCircleBAction
+    7400040: Big|BigAction
+    7400042: Big|CameraAction
+    7400044: Big|Electron_AAction
+    7400046: Big|Electron_BAction
+    7400048: Big|LampAction
+    7400050: Big|Orbit
+    7400052: Big|vertiAction
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .25
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
