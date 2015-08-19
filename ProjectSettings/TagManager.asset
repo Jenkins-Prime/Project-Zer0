@@ -5,12 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - CameraFollow
-  - Coin
-  - UIManager
-  - Spark
-  - Scrap
-  - Spark
-  - Spark
   layers:
   - Default
   - TransparentFX
