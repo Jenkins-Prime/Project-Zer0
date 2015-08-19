@@ -2,17 +2,17 @@
 using System.Collections;
 
 public class PickupHeart : MonoBehaviour {
-	PlayerStatus status;
+	PlayerHealth playerHealth;
 	[SerializeField] int amount = 1;
 
 	// Use this for initialization
 	void Start () {
-		status = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
+		playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 	}
 	
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player") {
-			if(status.GainHealth(amount) == true) {
+			if(playerHealth.GainHealth(amount)) {
 				Invoke("ReActivate", 5);
 				gameObject.SetActive(false);
 			}
