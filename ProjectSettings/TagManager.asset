@@ -9,8 +9,6 @@ TagManager:
   - UIManager
   - Spark
   - Scrap
-  - Spark
-  - Spark
   layers:
   - Default
   - TransparentFX
