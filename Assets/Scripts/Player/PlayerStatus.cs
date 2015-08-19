@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour {
-	[SerializeField] int health = 3;
-	int maxHealth = 3;
 	[SerializeField] int lives = 2;
 	int maxLives = 10;
 	[SerializeField] int ammo = 0;
@@ -19,30 +18,19 @@ public class PlayerStatus : MonoBehaviour {
 	[SerializeField] bool heartKeyOwned = false;
 	[SerializeField] bool heartCageUnlocked = false;
 
-	public bool GainHealth(int amount) {
-		if (health == maxHealth) {
-			return false;
-		} else {
-			health += amount;
-			if (health >= maxHealth) {
-				health = maxHealth;
-			}
-			//Do gui stuff, play sound, etc actions
-			return true;
-		}
+	private Text coinAmount;
+	private Text sparkAmount;
+	private Text scrapAmount;
+	private UIManager manager;
+
+	void Awake()
+	{
+		manager = GameObject.FindGameObjectWithTag ("UIManager").GetComponent<UIManager> ();
 	}
 
-	public void LoseHealth(int amount) {
-		health -= amount;
-		if (health < 0) {
-			LoseLife();
-		}
-	}
-
-	public void IncreaseMaxHealth() {
-		maxHealth++;
-		health = maxHealth;
-		//Do GUI stuff, animation
+	void Start()
+	{
+		//StartCoroutine ();
 	}
 
 	public bool GainLife(int amount) {
@@ -89,12 +77,18 @@ public class PlayerStatus : MonoBehaviour {
 		}
 	}
 	
-	public void CollectSpark() {
-		sparkCount++;
-		//Do GUI stuff, animation
-		if (sparkCount == totalSparks) {
-			//Do GUI stuff, animation for completed Sparks
+	public void CollectSpark() 
+	{
+		if(sparkCount == totalSparks)
+		{
+			sparkCount = totalSparks;
 		}
+
+		manager.ShowSpark ();
+		sparkCount++;
+		sparkAmount = GameObject.FindGameObjectWithTag ("Spark").transform.GetChild (1).GetComponent<Text> ();
+		sparkAmount.text = sparkCount.ToString ();
+		StartCoroutine (SparkTimer ());
 	}
 
 	public void CollectSparkie(int index) {
@@ -111,20 +105,32 @@ public class PlayerStatus : MonoBehaviour {
 		}
 	}
 	
-	public void CollectScrap() {
-		scrapCount++;
-		//Do GUI stuff, animation
-		if (scrapCount == totalScrap) {
-			//Do GUI stuff, animation for completed Scrap
+	public void CollectScrap() 
+	{
+		if(scrapCount == totalScrap)
+		{
+			scrapCount = totalScrap;
 		}
+		manager.ShowScrap();
+		scrapCount++;
+		scrapAmount = GameObject.FindGameObjectWithTag ("Scrap").transform.GetChild (1).GetComponent<Text> ();
+		scrapAmount.text = scrapCount.ToString ();
+		StartCoroutine (ScrapTimer ());
+
 	}
 	
-	public void CollectGoldCoin() {
-		goldCoinCount++;
-		//Do GUI stuff, animation
-		if (goldCoinCount == totalGoldCoins) { //IF NECESSARY
-			//Do GUI stuff, animation for completed GoldCoins
+	public void CollectGoldCoin() 
+	{
+		if(goldCoinCount == totalGoldCoins)
+		{
+			goldCoinCount = totalGoldCoins;
 		}
+
+		manager.ShowCoin ();
+		goldCoinCount++;
+		coinAmount = GameObject.FindGameObjectWithTag ("Coin").transform.GetChild (1).GetComponent<Text> ();
+		coinAmount.text = goldCoinCount.ToString ();
+		StartCoroutine (CoinTimer ());
 	}
 	
 	public void CollectHeartKey() {
@@ -136,25 +142,31 @@ public class PlayerStatus : MonoBehaviour {
 		if (heartKeyOwned == true) {
 			heartKeyOwned = false;
 			heartCageUnlocked = true;
-			
-			IncreaseMaxHealth ();
+
 			return true;
 		}
 		return false;
 	}
+
+	IEnumerator CoinTimer()
+	{
+		yield return new WaitForSeconds(5.0f);
+		manager.HideCoin ();
+	}
+
+	IEnumerator SparkTimer()
+	{
+		yield return new WaitForSeconds(5.0f);
+		manager.HideSpark ();
+	}
+
+	IEnumerator ScrapTimer()
+	{
+		yield return new WaitForSeconds(5.0f);
+		manager.HideScrap ();
+	}
 	
 	//==========Getter Functions===========
-	public int Health {
-		get {
-			return health;
-		}
-	}
-	
-	public int MaxHealth {
-		get {
-			return maxHealth;
-		}
-	}
 	
 	public int Lives {
 		get {
