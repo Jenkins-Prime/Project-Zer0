@@ -21,16 +21,12 @@ public class PlayerStatus : MonoBehaviour {
 	private Text coinAmount;
 	private Text sparkAmount;
 	private Text scrapAmount;
+	private Text ammoAmount;
 	private UIManager manager;
 
 	void Awake()
 	{
 		manager = GameObject.FindGameObjectWithTag ("UIManager").GetComponent<UIManager> ();
-	}
-
-	void Start()
-	{
-		//StartCoroutine ();
 	}
 
 	public bool GainLife(int amount) {
@@ -58,20 +54,31 @@ public class PlayerStatus : MonoBehaviour {
 	}
 
 	public bool GainAmmo(int amount) {
-		if (ammo == maxAmmo) {
-			return false;
-		} else {
-			ammo += amount;
-			if (ammo >= maxAmmo) {
-				ammo = maxAmmo;
-			}
+		
+
+		manager.ShowAmmo ();
+		ammo += amount;
+		ammoAmount = GameObject.FindGameObjectWithTag ("Ammo").transform.GetChild (1).GetComponent<Text> ();
+		ammoAmount.text = ammo.ToString ();
+		StartCoroutine (AmmoTimer ());
+
+		if (ammo >= maxAmmo) 
+		{
+			ammo = maxAmmo;
+		}
 			//Do GUI stuff, play sound, etc actions
 			return true;
-		}
+
 	}
 	
 	public void LoseAmmo(int amount) {
+
+		manager.ShowAmmo ();
 		ammo -= amount;
+		ammoAmount = GameObject.FindGameObjectWithTag ("Ammo").transform.GetChild (1).GetComponent<Text> ();
+		ammoAmount.text = ammo.ToString ();
+		StartCoroutine (AmmoTimer ());
+
 		if (ammo < 0) {
 			ammo = 0;
 		}
@@ -88,7 +95,7 @@ public class PlayerStatus : MonoBehaviour {
 		sparkCount++;
 		sparkAmount = GameObject.FindGameObjectWithTag ("Spark").transform.GetChild (1).GetComponent<Text> ();
 		sparkAmount.text = sparkCount.ToString ();
-		StartCoroutine (SparkTimer ());
+		StartCoroutine (AmmoTimer ());
 	}
 
 	public void CollectSparkie(int index) {
@@ -164,6 +171,12 @@ public class PlayerStatus : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(5.0f);
 		manager.HideScrap ();
+	}
+
+	IEnumerator AmmoTimer()
+	{
+		yield return new WaitForSeconds(5.0f);
+		manager.HideAmmo ();
 	}
 	
 	//==========Getter Functions===========
