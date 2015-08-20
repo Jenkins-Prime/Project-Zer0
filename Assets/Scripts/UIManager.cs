@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
 	public GameObject coinUI;
 	public GameObject sparkUI;
 	public GameObject scrapUI;
+	public GameObject ammoUI;
 	public GameObject menu;
 
 	void Start()
@@ -13,7 +14,9 @@ public class UIManager : MonoBehaviour
 		coinUI.SetActive(false);
 		sparkUI.SetActive(false);
 		scrapUI.SetActive (false);
+		ammoUI.SetActive (false);
 		menu.SetActive(false);
+
 	}
 
 	public void ShowCoin()
@@ -46,12 +49,23 @@ public class UIManager : MonoBehaviour
 		scrapUI.SetActive (false);
 	}
 
+	public void ShowAmmo()
+	{
+		ammoUI.SetActive (true);
+	}
+	
+	public void HideAmmo()
+	{
+		ammoUI.SetActive (false);
+	}
+
 	public void ShowMenu()
 	{
 		menu.SetActive (true);
 		coinUI.SetActive(true);
 		sparkUI.SetActive(true);
 		scrapUI.SetActive (true);
+		ammoUI.SetActive (true);
 	}
 	
 	public void HideMenu()
@@ -60,5 +74,6 @@ public class UIManager : MonoBehaviour
 		coinUI.SetActive(false);
 		sparkUI.SetActive(false);
 		scrapUI.SetActive (false);
+		ammoUI.SetActive (false);
 	}
 }
