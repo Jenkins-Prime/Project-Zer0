@@ -1,0 +1,1157 @@
+fileFormatVersion: 2
+guid: 2f8aa002991a8804a9c32223f24b9c98
+timeCreated: 1440265402
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Ctr_LElbow_L001
+    100002: Ctr_LElbow_L002
+    100004: Ctr_LKNee_L002
+    100006: Ctr_LKNee_L01
+    100008: eyeliesh006
+    100010: eyeliesh007
+    100012: //RootNode
+    100014: Jake_CatBone
+    100016: Jake_CatBoneAnkleBone001_L
+    100018: Jake_CatBoneAnkleBone001_R
+    100020: Jake_CatBoneBag
+    100022: Jake_CatBoneChest
+    100024: Jake_CatBoneEarL
+    100026: Jake_CatBoneEarR
+    100028: Jake_CatBoneFingerL1-1
+    100030: Jake_CatBoneFingerL1-2
+    100032: Jake_CatBoneFingerL1-3
+    100034: Jake_CatBoneFingerL2-1
+    100036: Jake_CatBoneFingerL2-2
+    100038: Jake_CatBoneFingerL2-3
+    100040: Jake_CatBoneFingerL3-1
+    100042: Jake_CatBoneFingerL3-2
+    100044: Jake_CatBoneFingerL3-3
+    100046: Jake_CatBoneFingerR1-1
+    100048: Jake_CatBoneFingerR1-2
+    100050: Jake_CatBoneFingerR1-3
+    100052: Jake_CatBoneFingerR2-1
+    100054: Jake_CatBoneFingerR2-2
+    100056: Jake_CatBoneFingerR2-3
+    100058: Jake_CatBoneFingerR3-1
+    100060: Jake_CatBoneFingerR3-2
+    100062: Jake_CatBoneFingerR3-3
+    100064: Jake_CatBoneHead
+    100066: Jake_CatBoneLArm
+    100068: Jake_CatBoneLArmIKTarget
+    100070: Jake_CatBoneLArmPalm_L
+    100072: Jake_CatBoneLElbow
+    100074: Jake_CatBoneLLeg
+    100076: Jake_CatBoneLLegAnkle_R
+    100078: Jake_CatBoneLLegPlatform
+    100080: Jake_CatBoneLShoulder
+    100082: Jake_CatBoneLTight
+    100084: Jake_CatBoneMouth1
+    100086: Jake_CatBoneMouth2
+    100088: Jake_CatBoneNeck1
+    100090: Jake_CatBoneNeck2
+    100092: Jake_CatBonePelvis
+    100094: Jake_CatBoneRArm
+    100096: Jake_CatBoneRArmIKTarget
+    100098: Jake_CatBoneRArmPalm_R
+    100100: Jake_CatBoneRElbow
+    100102: Jake_CatBoneRLeg
+    100104: Jake_CatBoneRLegAnkle_L
+    100106: Jake_CatBoneRLegPlatform
+    100108: Jake_CatBoneRShoulder
+    100110: Jake_CatBoneRTight
+    100112: Jake_CatBoneSpine1
+    100114: Jake_CatBoneSpine2
+    100116: Jake_CatBoneSpine2 1
+    100118: Jake_CatBoneTail1
+    100120: Jake_CatBoneTail2
+    100122: Jake_CatBoneTail3
+    100124: JakeBody_Mesh_low
+    400000: Ctr_LElbow_L001
+    400002: Ctr_LElbow_L002
+    400004: Ctr_LKNee_L002
+    400006: Ctr_LKNee_L01
+    400008: eyeliesh006
+    400010: eyeliesh007
+    400012: //RootNode
+    400014: Jake_CatBone
+    400016: Jake_CatBoneAnkleBone001_L
+    400018: Jake_CatBoneAnkleBone001_R
+    400020: Jake_CatBoneBag
+    400022: Jake_CatBoneChest
+    400024: Jake_CatBoneEarL
+    400026: Jake_CatBoneEarR
+    400028: Jake_CatBoneFingerL1-1
+    400030: Jake_CatBoneFingerL1-2
+    400032: Jake_CatBoneFingerL1-3
+    400034: Jake_CatBoneFingerL2-1
+    400036: Jake_CatBoneFingerL2-2
+    400038: Jake_CatBoneFingerL2-3
+    400040: Jake_CatBoneFingerL3-1
+    400042: Jake_CatBoneFingerL3-2
+    400044: Jake_CatBoneFingerL3-3
+    400046: Jake_CatBoneFingerR1-1
+    400048: Jake_CatBoneFingerR1-2
+    400050: Jake_CatBoneFingerR1-3
+    400052: Jake_CatBoneFingerR2-1
+    400054: Jake_CatBoneFingerR2-2
+    400056: Jake_CatBoneFingerR2-3
+    400058: Jake_CatBoneFingerR3-1
+    400060: Jake_CatBoneFingerR3-2
+    400062: Jake_CatBoneFingerR3-3
+    400064: Jake_CatBoneHead
+    400066: Jake_CatBoneLArm
+    400068: Jake_CatBoneLArmIKTarget
+    400070: Jake_CatBoneLArmPalm_L
+    400072: Jake_CatBoneLElbow
+    400074: Jake_CatBoneLLeg
+    400076: Jake_CatBoneLLegAnkle_R
+    400078: Jake_CatBoneLLegPlatform
+    400080: Jake_CatBoneLShoulder
+    400082: Jake_CatBoneLTight
+    400084: Jake_CatBoneMouth1
+    400086: Jake_CatBoneMouth2
+    400088: Jake_CatBoneNeck1
+    400090: Jake_CatBoneNeck2
+    400092: Jake_CatBonePelvis
+    400094: Jake_CatBoneRArm
+    400096: Jake_CatBoneRArmIKTarget
+    400098: Jake_CatBoneRArmPalm_R
+    400100: Jake_CatBoneRElbow
+    400102: Jake_CatBoneRLeg
+    400104: Jake_CatBoneRLegAnkle_L
+    400106: Jake_CatBoneRLegPlatform
+    400108: Jake_CatBoneRShoulder
+    400110: Jake_CatBoneRTight
+    400112: Jake_CatBoneSpine1
+    400114: Jake_CatBoneSpine2
+    400116: Jake_CatBoneSpine2 1
+    400118: Jake_CatBoneTail1
+    400120: Jake_CatBoneTail2
+    400122: Jake_CatBoneTail3
+    400124: JakeBody_Mesh_low
+    4300000: JakeBody_Mesh_low
+    4300002: eyeliesh006
+    4300004: eyeliesh007
+    7400000: Jake@Idle
+    7400002: Jake@Walk
+    7400004: Jake@Run
+    7400006: Jake@Jump
+    7400008: Jake@Crouch
+    9500000: //RootNode
+    13700000: eyeliesh006
+    13700002: eyeliesh007
+    13700004: JakeBody_Mesh_low
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Jake@Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jake_CatBone
+        weight: 1
+      - path: Jake_CatBone/Ctr_LElbow_L001
+        weight: 1
+      - path: Jake_CatBone/Ctr_LElbow_L002
+        weight: 1
+      - path: Jake_CatBone/Ctr_LKNee_L01
+        weight: 1
+      - path: Jake_CatBone/Ctr_LKNee_L002
+        weight: 1
+      - path: Jake_CatBoneLArmIKTarget
+        weight: 1
+      - path: Jake_CatBoneLLegPlatform
+        weight: 1
+      - path: Jake_CatBonePelvis
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg/Jake_CatBoneLLegAnkle_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg/Jake_CatBoneLLegAnkle_R/Jake_CatBoneAnkleBone001_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg/Jake_CatBoneRLegAnkle_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg/Jake_CatBoneRLegAnkle_L/Jake_CatBoneAnkleBone001_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneBag
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1/Jake_CatBoneFingerL1-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1/Jake_CatBoneFingerL1-2/Jake_CatBoneFingerL1-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1/Jake_CatBoneFingerL2-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1/Jake_CatBoneFingerL2-2/Jake_CatBoneFingerL2-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1/Jake_CatBoneFingerL3-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1/Jake_CatBoneFingerL3-2/Jake_CatBoneFingerL3-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/eyeliesh006
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/eyeliesh007
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneEarL
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneEarR
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneMouth1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneMouth1/Jake_CatBoneMouth2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1/Jake_CatBoneFingerR1-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1/Jake_CatBoneFingerR1-2/Jake_CatBoneFingerR1-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1/Jake_CatBoneFingerR2-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1/Jake_CatBoneFingerR2-2/Jake_CatBoneFingerR2-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1/Jake_CatBoneFingerR3-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1/Jake_CatBoneFingerR3-2/Jake_CatBoneFingerR3-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1/Jake_CatBoneTail2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1/Jake_CatBoneTail2/Jake_CatBoneTail3
+        weight: 1
+      - path: Jake_CatBoneRArmIKTarget
+        weight: 1
+      - path: Jake_CatBoneRLegPlatform
+        weight: 1
+      - path: JakeBody_Mesh_low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jake@Walk
+      takeName: Take 001
+      firstFrame: 36
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jake_CatBone
+        weight: 1
+      - path: Jake_CatBone/Ctr_LElbow_L001
+        weight: 1
+      - path: Jake_CatBone/Ctr_LElbow_L002
+        weight: 1
+      - path: Jake_CatBone/Ctr_LKNee_L01
+        weight: 1
+      - path: Jake_CatBone/Ctr_LKNee_L002
+        weight: 1
+      - path: Jake_CatBoneLArmIKTarget
+        weight: 1
+      - path: Jake_CatBoneLLegPlatform
+        weight: 1
+      - path: Jake_CatBonePelvis
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg/Jake_CatBoneLLegAnkle_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg/Jake_CatBoneLLegAnkle_R/Jake_CatBoneAnkleBone001_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg/Jake_CatBoneRLegAnkle_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg/Jake_CatBoneRLegAnkle_L/Jake_CatBoneAnkleBone001_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneBag
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1/Jake_CatBoneFingerL1-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1/Jake_CatBoneFingerL1-2/Jake_CatBoneFingerL1-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1/Jake_CatBoneFingerL2-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1/Jake_CatBoneFingerL2-2/Jake_CatBoneFingerL2-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1/Jake_CatBoneFingerL3-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1/Jake_CatBoneFingerL3-2/Jake_CatBoneFingerL3-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/eyeliesh006
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/eyeliesh007
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneEarL
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneEarR
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneMouth1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneMouth1/Jake_CatBoneMouth2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1/Jake_CatBoneFingerR1-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1/Jake_CatBoneFingerR1-2/Jake_CatBoneFingerR1-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1/Jake_CatBoneFingerR2-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1/Jake_CatBoneFingerR2-2/Jake_CatBoneFingerR2-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1/Jake_CatBoneFingerR3-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1/Jake_CatBoneFingerR3-2/Jake_CatBoneFingerR3-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1/Jake_CatBoneTail2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1/Jake_CatBoneTail2/Jake_CatBoneTail3
+        weight: 1
+      - path: Jake_CatBoneRArmIKTarget
+        weight: 1
+      - path: Jake_CatBoneRLegPlatform
+        weight: 1
+      - path: JakeBody_Mesh_low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jake@Run
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 82
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jake_CatBone
+        weight: 1
+      - path: Jake_CatBone/Ctr_LElbow_L001
+        weight: 1
+      - path: Jake_CatBone/Ctr_LElbow_L002
+        weight: 1
+      - path: Jake_CatBone/Ctr_LKNee_L01
+        weight: 1
+      - path: Jake_CatBone/Ctr_LKNee_L002
+        weight: 1
+      - path: Jake_CatBoneLArmIKTarget
+        weight: 1
+      - path: Jake_CatBoneLLegPlatform
+        weight: 1
+      - path: Jake_CatBonePelvis
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg/Jake_CatBoneLLegAnkle_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg/Jake_CatBoneLLegAnkle_R/Jake_CatBoneAnkleBone001_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg/Jake_CatBoneRLegAnkle_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg/Jake_CatBoneRLegAnkle_L/Jake_CatBoneAnkleBone001_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneBag
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1/Jake_CatBoneFingerL1-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1/Jake_CatBoneFingerL1-2/Jake_CatBoneFingerL1-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1/Jake_CatBoneFingerL2-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1/Jake_CatBoneFingerL2-2/Jake_CatBoneFingerL2-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1/Jake_CatBoneFingerL3-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1/Jake_CatBoneFingerL3-2/Jake_CatBoneFingerL3-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/eyeliesh006
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/eyeliesh007
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneEarL
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneEarR
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneMouth1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneMouth1/Jake_CatBoneMouth2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1/Jake_CatBoneFingerR1-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1/Jake_CatBoneFingerR1-2/Jake_CatBoneFingerR1-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1/Jake_CatBoneFingerR2-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1/Jake_CatBoneFingerR2-2/Jake_CatBoneFingerR2-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1/Jake_CatBoneFingerR3-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1/Jake_CatBoneFingerR3-2/Jake_CatBoneFingerR3-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1/Jake_CatBoneTail2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1/Jake_CatBoneTail2/Jake_CatBoneTail3
+        weight: 1
+      - path: Jake_CatBoneRArmIKTarget
+        weight: 1
+      - path: Jake_CatBoneRLegPlatform
+        weight: 1
+      - path: JakeBody_Mesh_low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jake@Jump
+      takeName: Take 001
+      firstFrame: 92
+      lastFrame: 117
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jake_CatBone
+        weight: 1
+      - path: Jake_CatBone/Ctr_LElbow_L001
+        weight: 1
+      - path: Jake_CatBone/Ctr_LElbow_L002
+        weight: 1
+      - path: Jake_CatBone/Ctr_LKNee_L01
+        weight: 1
+      - path: Jake_CatBone/Ctr_LKNee_L002
+        weight: 1
+      - path: Jake_CatBoneLArmIKTarget
+        weight: 1
+      - path: Jake_CatBoneLLegPlatform
+        weight: 1
+      - path: Jake_CatBonePelvis
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg/Jake_CatBoneLLegAnkle_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg/Jake_CatBoneLLegAnkle_R/Jake_CatBoneAnkleBone001_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg/Jake_CatBoneRLegAnkle_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg/Jake_CatBoneRLegAnkle_L/Jake_CatBoneAnkleBone001_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneBag
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1/Jake_CatBoneFingerL1-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1/Jake_CatBoneFingerL1-2/Jake_CatBoneFingerL1-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1/Jake_CatBoneFingerL2-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1/Jake_CatBoneFingerL2-2/Jake_CatBoneFingerL2-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1/Jake_CatBoneFingerL3-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1/Jake_CatBoneFingerL3-2/Jake_CatBoneFingerL3-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/eyeliesh006
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/eyeliesh007
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneEarL
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneEarR
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneMouth1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneMouth1/Jake_CatBoneMouth2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1/Jake_CatBoneFingerR1-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1/Jake_CatBoneFingerR1-2/Jake_CatBoneFingerR1-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1/Jake_CatBoneFingerR2-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1/Jake_CatBoneFingerR2-2/Jake_CatBoneFingerR2-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1/Jake_CatBoneFingerR3-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1/Jake_CatBoneFingerR3-2/Jake_CatBoneFingerR3-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1/Jake_CatBoneTail2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1/Jake_CatBoneTail2/Jake_CatBoneTail3
+        weight: 1
+      - path: Jake_CatBoneRArmIKTarget
+        weight: 1
+      - path: Jake_CatBoneRLegPlatform
+        weight: 1
+      - path: JakeBody_Mesh_low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jake@Crouch
+      takeName: Take 001
+      firstFrame: 127
+      lastFrame: 152
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jake_CatBone
+        weight: 1
+      - path: Jake_CatBone/Ctr_LElbow_L001
+        weight: 1
+      - path: Jake_CatBone/Ctr_LElbow_L002
+        weight: 1
+      - path: Jake_CatBone/Ctr_LKNee_L01
+        weight: 1
+      - path: Jake_CatBone/Ctr_LKNee_L002
+        weight: 1
+      - path: Jake_CatBoneLArmIKTarget
+        weight: 1
+      - path: Jake_CatBoneLLegPlatform
+        weight: 1
+      - path: Jake_CatBonePelvis
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg/Jake_CatBoneLLegAnkle_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneLTight/Jake_CatBoneLLeg/Jake_CatBoneLLegAnkle_R/Jake_CatBoneAnkleBone001_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg/Jake_CatBoneRLegAnkle_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneRTight/Jake_CatBoneRLeg/Jake_CatBoneRLegAnkle_L/Jake_CatBoneAnkleBone001_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneBag
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1/Jake_CatBoneFingerL1-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL1-1/Jake_CatBoneFingerL1-2/Jake_CatBoneFingerL1-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1/Jake_CatBoneFingerL2-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL2-1/Jake_CatBoneFingerL2-2/Jake_CatBoneFingerL2-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1/Jake_CatBoneFingerL3-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneLShoulder/Jake_CatBoneLArm/Jake_CatBoneLElbow/Jake_CatBoneLArmPalm_L/Jake_CatBoneFingerL3-1/Jake_CatBoneFingerL3-2/Jake_CatBoneFingerL3-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/eyeliesh006
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/eyeliesh007
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneEarL
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneEarR
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneMouth1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneNeck1/Jake_CatBoneNeck2/Jake_CatBoneHead/Jake_CatBoneMouth1/Jake_CatBoneMouth2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1/Jake_CatBoneFingerR1-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR1-1/Jake_CatBoneFingerR1-2/Jake_CatBoneFingerR1-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1/Jake_CatBoneFingerR2-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR2-1/Jake_CatBoneFingerR2-2/Jake_CatBoneFingerR2-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1/Jake_CatBoneFingerR3-2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneSpine1/Jake_CatBoneSpine2/Jake_CatBoneSpine2
+          1/Jake_CatBoneChest/Jake_CatBoneRShoulder/Jake_CatBoneRArm/Jake_CatBoneRElbow/Jake_CatBoneRArmPalm_R/Jake_CatBoneFingerR3-1/Jake_CatBoneFingerR3-2/Jake_CatBoneFingerR3-3
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1/Jake_CatBoneTail2
+        weight: 1
+      - path: Jake_CatBonePelvis/Jake_CatBoneTail1/Jake_CatBoneTail2/Jake_CatBoneTail3
+        weight: 1
+      - path: Jake_CatBoneRArmIKTarget
+        weight: 1
+      - path: Jake_CatBoneRLegPlatform
+        weight: 1
+      - path: JakeBody_Mesh_low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
