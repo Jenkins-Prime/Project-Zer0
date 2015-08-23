@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: c80b46eb76382144db8a4c795fe0aec0
+timeCreated: 1440276349
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Ctr_LElbow_L001
+    100002: Ctr_LElbow_L002
+    100004: Ctr_LKNee_L002
+    100006: Ctr_LKNee_L01
+    100008: eyeliesh006
+    100010: eyeliesh007
+    100012: //RootNode
+    100014: Jake_CatBone
+    100016: Jake_CatBoneAnkleBone001_L
+    100018: Jake_CatBoneAnkleBone001_R
+    100020: Jake_CatBoneBag
+    100022: Jake_CatBoneChest
+    100024: Jake_CatBoneEarL
+    100026: Jake_CatBoneEarR
+    100028: Jake_CatBoneFingerL1-1
+    100030: Jake_CatBoneFingerL1-2
+    100032: Jake_CatBoneFingerL1-3
+    100034: Jake_CatBoneFingerL2-1
+    100036: Jake_CatBoneFingerL2-2
+    100038: Jake_CatBoneFingerL2-3
+    100040: Jake_CatBoneFingerL3-1
+    100042: Jake_CatBoneFingerL3-2
+    100044: Jake_CatBoneFingerL3-3
+    100046: Jake_CatBoneFingerR1-1
+    100048: Jake_CatBoneFingerR1-2
+    100050: Jake_CatBoneFingerR1-3
+    100052: Jake_CatBoneFingerR2-1
+    100054: Jake_CatBoneFingerR2-2
+    100056: Jake_CatBoneFingerR2-3
+    100058: Jake_CatBoneFingerR3-1
+    100060: Jake_CatBoneFingerR3-2
+    100062: Jake_CatBoneFingerR3-3
+    100064: Jake_CatBoneHead
+    100066: Jake_CatBoneLArm
+    100068: Jake_CatBoneLArmIKTarget
+    100070: Jake_CatBoneLArmPalm_L
+    100072: Jake_CatBoneLElbow
+    100074: Jake_CatBoneLLeg
+    100076: Jake_CatBoneLLegAnkle_R
+    100078: Jake_CatBoneLLegPlatform
+    100080: Jake_CatBoneLShoulder
+    100082: Jake_CatBoneLTight
+    100084: Jake_CatBoneMouth1
+    100086: Jake_CatBoneMouth2
+    100088: Jake_CatBoneNeck1
+    100090: Jake_CatBoneNeck2
+    100092: Jake_CatBonePelvis
+    100094: Jake_CatBoneRArm
+    100096: Jake_CatBoneRArmIKTarget
+    100098: Jake_CatBoneRArmPalm_R
+    100100: Jake_CatBoneRElbow
+    100102: Jake_CatBoneRLeg
+    100104: Jake_CatBoneRLegAnkle_L
+    100106: Jake_CatBoneRLegPlatform
+    100108: Jake_CatBoneRShoulder
+    100110: Jake_CatBoneRTight
+    100112: Jake_CatBoneSpine1
+    100114: Jake_CatBoneSpine2
+    100116: Jake_CatBoneSpine2 1
+    100118: Jake_CatBoneTail1
+    100120: Jake_CatBoneTail2
+    100122: Jake_CatBoneTail3
+    100124: JakeBody_Mesh_low
+    400000: Ctr_LElbow_L001
+    400002: Ctr_LElbow_L002
+    400004: Ctr_LKNee_L002
+    400006: Ctr_LKNee_L01
+    400008: eyeliesh006
+    400010: eyeliesh007
+    400012: //RootNode
+    400014: Jake_CatBone
+    400016: Jake_CatBoneAnkleBone001_L
+    400018: Jake_CatBoneAnkleBone001_R
+    400020: Jake_CatBoneBag
+    400022: Jake_CatBoneChest
+    400024: Jake_CatBoneEarL
+    400026: Jake_CatBoneEarR
+    400028: Jake_CatBoneFingerL1-1
+    400030: Jake_CatBoneFingerL1-2
+    400032: Jake_CatBoneFingerL1-3
+    400034: Jake_CatBoneFingerL2-1
+    400036: Jake_CatBoneFingerL2-2
+    400038: Jake_CatBoneFingerL2-3
+    400040: Jake_CatBoneFingerL3-1
+    400042: Jake_CatBoneFingerL3-2
+    400044: Jake_CatBoneFingerL3-3
+    400046: Jake_CatBoneFingerR1-1
+    400048: Jake_CatBoneFingerR1-2
+    400050: Jake_CatBoneFingerR1-3
+    400052: Jake_CatBoneFingerR2-1
+    400054: Jake_CatBoneFingerR2-2
+    400056: Jake_CatBoneFingerR2-3
+    400058: Jake_CatBoneFingerR3-1
+    400060: Jake_CatBoneFingerR3-2
+    400062: Jake_CatBoneFingerR3-3
+    400064: Jake_CatBoneHead
+    400066: Jake_CatBoneLArm
+    400068: Jake_CatBoneLArmIKTarget
+    400070: Jake_CatBoneLArmPalm_L
+    400072: Jake_CatBoneLElbow
+    400074: Jake_CatBoneLLeg
+    400076: Jake_CatBoneLLegAnkle_R
+    400078: Jake_CatBoneLLegPlatform
+    400080: Jake_CatBoneLShoulder
+    400082: Jake_CatBoneLTight
+    400084: Jake_CatBoneMouth1
+    400086: Jake_CatBoneMouth2
+    400088: Jake_CatBoneNeck1
+    400090: Jake_CatBoneNeck2
+    400092: Jake_CatBonePelvis
+    400094: Jake_CatBoneRArm
+    400096: Jake_CatBoneRArmIKTarget
+    400098: Jake_CatBoneRArmPalm_R
+    400100: Jake_CatBoneRElbow
+    400102: Jake_CatBoneRLeg
+    400104: Jake_CatBoneRLegAnkle_L
+    400106: Jake_CatBoneRLegPlatform
+    400108: Jake_CatBoneRShoulder
+    400110: Jake_CatBoneRTight
+    400112: Jake_CatBoneSpine1
+    400114: Jake_CatBoneSpine2
+    400116: Jake_CatBoneSpine2 1
+    400118: Jake_CatBoneTail1
+    400120: Jake_CatBoneTail2
+    400122: Jake_CatBoneTail3
+    400124: JakeBody_Mesh_low
+    4300000: JakeBody_Mesh_low
+    4300002: eyeliesh006
+    4300004: eyeliesh007
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: eyeliesh006
+    13700002: eyeliesh007
+    13700004: JakeBody_Mesh_low
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

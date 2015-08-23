@@ -2,7 +2,11 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
+<<<<<<< HEAD
   serializedVersion: 6
+=======
+  serializedVersion: 5
+>>>>>>> ae19bbbf49118226f2b82a95b7f5ef901abae9bc
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11,7 +15,10 @@ Material:
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
+<<<<<<< HEAD
   stringTagMap: {}
+=======
+>>>>>>> ae19bbbf49118226f2b82a95b7f5ef901abae9bc
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -81,6 +88,13 @@ Material:
     m_Floats:
       data:
         first:
+<<<<<<< HEAD
+=======
+          name: _Cutoff
+        second: .5
+      data:
+        first:
+>>>>>>> ae19bbbf49118226f2b82a95b7f5ef901abae9bc
           name: _SrcBlend
         second: 1
       data:
@@ -89,10 +103,13 @@ Material:
         second: 0
       data:
         first:
+<<<<<<< HEAD
           name: _Cutoff
         second: .5
       data:
         first:
+=======
+>>>>>>> ae19bbbf49118226f2b82a95b7f5ef901abae9bc
           name: _ZWrite
         second: 1
       data:
@@ -127,6 +144,13 @@ Material:
         first:
           name: _Mode
         second: 0
+<<<<<<< HEAD
+=======
+      data:
+        first:
+          name: _EmissionScaleUI
+        second: 0
+>>>>>>> ae19bbbf49118226f2b82a95b7f5ef901abae9bc
     m_Colors:
       data:
         first:
@@ -136,3 +160,10 @@ Material:
         first:
           name: _Color
         second: {r: .176470593, g: .176470593, b: .176470593, a: 1}
+<<<<<<< HEAD
+=======
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> ae19bbbf49118226f2b82a95b7f5ef901abae9bc
