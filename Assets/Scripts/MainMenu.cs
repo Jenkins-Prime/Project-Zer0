@@ -20,12 +20,10 @@ public class MainMenu : MonoBehaviour
 			if(isPaused)
 			{
 				manager.ShowMenu();
-				Time.timeScale = 0.0f;
 			}
 			else
 			{
 				manager.HideMenu();
-				Time.timeScale = 1.0f;
 			}
 
 

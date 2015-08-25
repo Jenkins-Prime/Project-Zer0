@@ -95,7 +95,7 @@ public class PlayerStatus : MonoBehaviour {
 		sparkCount++;
 		sparkAmount = GameObject.FindGameObjectWithTag ("Spark").transform.GetChild (1).GetComponent<Text> ();
 		sparkAmount.text = sparkCount.ToString ();
-		StartCoroutine (AmmoTimer ());
+		StartCoroutine (SparkTimer ());
 	}
 
 	public void CollectSparkie(int index) {
