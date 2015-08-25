@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour {
+	[SerializeField] int currentHearts = 3;
+	int maxHearts = 3;
 	[SerializeField] int lives = 2;
 	int maxLives = 10;
 	[SerializeField] int ammo = 0;
@@ -18,15 +20,66 @@ public class PlayerStatus : MonoBehaviour {
 	[SerializeField] bool heartKeyOwned = false;
 	[SerializeField] bool heartCageUnlocked = false;
 
+	public Image[] hearts;
 	private Text coinAmount;
 	private Text sparkAmount;
 	private Text scrapAmount;
 	private Text ammoAmount;
 	private UIManager manager;
 
-	void Awake()
+	void Start()
 	{
 		manager = GameObject.FindGameObjectWithTag ("UIManager").GetComponent<UIManager> ();
+	}
+
+	public bool GainHealth(int amount) 
+	{
+		currentHearts += amount;
+		
+		if(currentHearts >= maxHearts)
+		{
+			currentHearts = maxHearts;
+			return false;
+		}
+		
+		for(int i = 0; i < currentHearts; i++)
+		{
+			hearts[i].enabled = true;
+		}
+		
+		//Do gui stuff, play sound, etc actions
+		return true;
+	}
+	
+	public void LoseHealth(int amount) 
+	{
+		currentHearts-= amount;
+		
+		if(currentHearts < 0)
+		{
+			currentHearts = 0;
+		}
+		int temp = currentHearts + amount;
+		for(int i = currentHearts; i < temp; i++)
+		{
+			hearts[i].enabled = false;
+		}
+	}
+	
+	public void IncreaseMaxHealth(int amount) 
+	{
+		maxHearts += amount;
+		
+		if(maxHearts >= hearts.Length)
+		{
+			maxHearts = hearts.Length;
+		}
+		currentHearts = maxHearts;
+		for(int i = 0; i < currentHearts; i++)
+		{
+			hearts[i].enabled = true;
+			hearts[i].transform.parent.gameObject.SetActive(true);
+		}
 	}
 
 	public bool GainLife(int amount) {
@@ -149,7 +202,7 @@ public class PlayerStatus : MonoBehaviour {
 		if (heartKeyOwned == true) {
 			heartKeyOwned = false;
 			heartCageUnlocked = true;
-
+			IncreaseMaxHealth(1);
 			return true;
 		}
 		return false;

@@ -5,12 +5,12 @@ public class DamageScript : MonoBehaviour {
 	[SerializeField] int damage = 1;
 	float hitDelay = 2.0f;
 	float hitAllowed = 0f;
-	PlayerHealth playerHealth;
+	PlayerStatus status;
 
 	// Use this for initialization
 	void Start () 
 	{
-		playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+		status = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
 	}
 	
 	void OnCollisionStay(Collision other) 
@@ -19,7 +19,7 @@ public class DamageScript : MonoBehaviour {
 		{
 			if(Time.fixedTime > hitAllowed) 
 			{
-				playerHealth.LoseHealth(damage);
+				status.LoseHealth(damage);
 				hitAllowed = Time.fixedTime + hitDelay;
 			}
 		}
