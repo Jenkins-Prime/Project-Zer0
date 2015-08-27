@@ -25,7 +25,7 @@ public class LocomotionController : MonoBehaviour
 	void Awake()
 	{
 		rigidBody = GetComponent<Rigidbody> ();
-		walkAcceleration = 100.0f;
+		walkAcceleration = 5000.0f;
 		walkFriction = 0.2f;
 		walkAccelerationAirRatio = 0.1f;
 		maxWalkSpeed = 3.0f;
@@ -53,16 +53,13 @@ public class LocomotionController : MonoBehaviour
 		
 		if(grounded)
 		{
-			rigidBody.velocity = new Vector3(Mathf.SmoothDamp(rigidBody.velocity.x, 0, ref walkFrictionVelocityX, walkFriction),
-			                                 rigidBody.velocity.y,
-			                                 Mathf.SmoothDamp(rigidBody.velocity.z, 0, ref walkFrictionVelocityZ, walkFriction));
-			rigidBody.AddRelativeForce(Input.GetAxis("Horizontal") * Time.deltaTime * walkAcceleration, 0,
+			rigidBody.AddForce(Input.GetAxis("Horizontal") * Time.fixedDeltaTime * walkAcceleration, 0,
 			                           Input.GetAxis("Vertical") * Time.deltaTime * walkAcceleration);
 		}
 		else
 		{
-			rigidBody.AddRelativeForce(Input.GetAxis("Horizontal") * Time.deltaTime * walkAcceleration * walkAccelerationAirRatio, 0,
-			                           Input.GetAxis("Vertical") * Time.deltaTime * walkAcceleration * walkAccelerationAirRatio);
+			rigidBody.AddForce(Input.GetAxis("Horizontal") * Time.fixedDeltaTime * walkAcceleration * walkAccelerationAirRatio, 0,
+			                           Input.GetAxis("Vertical") * Time.fixedDeltaTime * walkAcceleration * walkAccelerationAirRatio);
 		}
 		
 		if(Input.GetButtonDown("Jump") && grounded)
