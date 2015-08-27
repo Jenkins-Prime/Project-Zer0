@@ -37,6 +37,11 @@ public class LocomotionController : MonoBehaviour
 	void FixedUpdate()
 	{
 		Move ();
+
+		if(Input.GetButtonDown("Jump") && grounded)
+		{
+			Jump();
+		}
 	}
 
 	private void Move()
@@ -61,11 +66,12 @@ public class LocomotionController : MonoBehaviour
 			rigidBody.AddForce(Input.GetAxis("Horizontal") * Time.fixedDeltaTime * walkAcceleration * walkAccelerationAirRatio, 0,
 			                           Input.GetAxis("Vertical") * Time.fixedDeltaTime * walkAcceleration * walkAccelerationAirRatio);
 		}
-		
-		if(Input.GetButtonDown("Jump") && grounded)
-		{
-			rigidBody.AddForce(0, jumpVelocity, 0);
-		}
+
+	}
+
+	private void Jump()
+	{
+		rigidBody.AddForce(0, jumpVelocity, 0);
 	}
 
 	void OnCollisionStay(Collision collision)
