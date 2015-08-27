@@ -926,15 +926,15 @@ ModelImporter:
     - serializedVersion: 16
       name: Jake@Crouch
       takeName: Take 001
-      firstFrame: 127
-      lastFrame: 152
+      firstFrame: 134
+      lastFrame: 144
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
