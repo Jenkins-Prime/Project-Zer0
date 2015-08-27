@@ -39,7 +39,7 @@ public class PlayerStatus : MonoBehaviour {
 		if(currentHearts >= maxHearts)
 		{
 			currentHearts = maxHearts;
-			return false;
+			//return false;
 		}
 		
 		for(int i = 0; i < currentHearts; i++)
