@@ -13,40 +13,59 @@ public class LocomotionController : MonoBehaviour
 	public float runtime;
 	
 	
-	//[HideInInspector]
+	[HideInInspector]
 	public bool grounded = false;
 	
 	
 	private float walkFrictionVelocityX;
 	private float walkFrictionVelocityZ;
 	private Vector2 horizontalMovement;
-	private Rigidbody rigidBody;
+	private Rigidbody rigidbody;
+	private Animator animator;
+	private float movementHorizontal;
+	private float movementVertical;
+
 
 	void Awake()
 	{
-		rigidBody = GetComponent<Rigidbody> ();
+		rigidbody = GetComponent<Rigidbody> ();
+		animator = GetComponent<Animator> ();
 		walkAcceleration = 5000.0f;
-		walkFriction = 0.2f;
+		walkFriction = 7.0f;
 		walkAccelerationAirRatio = 0.1f;
 		maxWalkSpeed = 3.0f;
 		jumpVelocity = 250.0f;
 		slopeLimit = 50.0f;
 		runtime = 5.0f;
+
+
+	}
+
+	void Start()
+	{
+		if(animator == null)
+		{
+			Debug.LogError("You are missing an animator component");
+			return;
+		}
 	}
 
 	void FixedUpdate()
 	{
 		Move ();
-
-		if(Input.GetButtonDown("Jump") && grounded)
+		if(Input.GetButtonDown("Jump") && grounded && movementHorizontal == 0)
 		{
 			Jump();
 		}
+
+		movementHorizontal = Input.GetAxis("Horizontal");
+		movementVertical = Input.GetAxis("Vertical");
 	}
 
 	private void Move()
 	{
-		horizontalMovement = new Vector2(rigidBody.velocity.x, rigidBody.velocity.z);
+		horizontalMovement = new Vector2(rigidbody.velocity.x, rigidbody.velocity.z);
+
 		
 		if(horizontalMovement.magnitude > maxWalkSpeed)
 		{
@@ -54,24 +73,30 @@ public class LocomotionController : MonoBehaviour
 			horizontalMovement *= maxWalkSpeed;
 		}
 		
-		rigidBody.velocity = new Vector3(horizontalMovement.x, rigidBody.velocity.y, horizontalMovement.y);
+		rigidbody.velocity = new Vector3(horizontalMovement.x * walkFriction, rigidbody.velocity.y, horizontalMovement.y);
 		
 		if(grounded)
 		{
-			rigidBody.AddForce(Input.GetAxis("Horizontal") * Time.fixedDeltaTime * walkAcceleration, 0,
-			                           Input.GetAxis("Vertical") * Time.deltaTime * walkAcceleration);
+	
+			rigidbody.velocity = new Vector3(Input.GetAxis("Horizontal") * walkFriction * Time.fixedDeltaTime, rigidbody.velocity.y, Input.GetAxis("Vertical") * walkFriction * Time.fixedDeltaTime);
+
+			animator.SetFloat("speed", movementHorizontal);
+			animator.SetFloat("speed", movementVertical);
 		}
 		else
 		{
-			rigidBody.AddForce(Input.GetAxis("Horizontal") * Time.fixedDeltaTime * walkAcceleration * walkAccelerationAirRatio, 0,
-			                           Input.GetAxis("Vertical") * Time.fixedDeltaTime * walkAcceleration * walkAccelerationAirRatio);
+			rigidbody.AddForce(horizontalMovement.x * Time.fixedDeltaTime * walkAcceleration * walkAccelerationAirRatio, 0,
+			                   horizontalMovement.y * Time.fixedDeltaTime * walkAcceleration * walkAccelerationAirRatio);
+			animator.SetFloat("speed", 0.0f);
+			animator.SetFloat("speed", 0.0f);
+
 		}
 
 	}
 
 	private void Jump()
 	{
-		rigidBody.AddForce(0, jumpVelocity, 0);
+		rigidbody.AddForce(0, jumpVelocity, 0);
 	}
 
 	void OnCollisionStay(Collision collision)
