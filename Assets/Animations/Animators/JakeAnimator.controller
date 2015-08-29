@@ -38,7 +38,7 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
 --- !u!206 &20631404
 BlendTree:
   m_ObjectHideFlags: 1
@@ -248,7 +248,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Crouching
-  m_Speed: 1
+  m_Speed: .25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110177036}
