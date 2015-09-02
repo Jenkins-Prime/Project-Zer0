@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CapsuleCollider))]
 public class PlayerController : MonoBehaviour 
 {
 	// Public Variables
@@ -19,9 +20,10 @@ public class PlayerController : MonoBehaviour
 
 	private float walkFrictionVelocityX;
 	private float walkFrictionVelocityZ;
-	private Vector2 horizontalMovement;
+	private Vector3 horizontalMovement;
 	private float horizontal;
 	private float vertical;
+	private float turnSpeed;
 	new private Rigidbody rigidbody;
 	private Animator animator;
 
@@ -34,16 +36,13 @@ public class PlayerController : MonoBehaviour
 	void Start()
 	{
 		rigidbody.freezeRotation = true;
-	}
-
-	void Update()
-	{
-
+		turnSpeed = 10.0f;
 	}
 
 	void FixedUpdate()
 	{
 		Move ();
+		RotatePlayer ();
 		Crouch ();
 		Jump ();
 		horizontal = Input.GetAxis ("Horizontal");
@@ -52,14 +51,14 @@ public class PlayerController : MonoBehaviour
 
 	private void Move()
 	{
-		horizontalMovement = new Vector2(rigidbody.velocity.x, rigidbody.velocity.z);
+		horizontalMovement = new Vector3(rigidbody.velocity.x, 0 ,rigidbody.velocity.z);
 		
 		if(horizontalMovement.magnitude > maxWalkSpeed)
 		{
 			horizontalMovement = horizontalMovement.normalized;
 			horizontalMovement *= maxWalkSpeed;
 		}
-		
+
 		rigidbody.velocity = new Vector3(horizontalMovement.x, rigidbody.velocity.y, horizontalMovement.y);
 		
 		if(grounded)
@@ -67,11 +66,11 @@ public class PlayerController : MonoBehaviour
 			rigidbody.velocity = new Vector3(Mathf.SmoothDamp(rigidbody.velocity.x, 0, ref walkFrictionVelocityX, walkFriction),
 			                                 rigidbody.velocity.y,
 			                                 Mathf.SmoothDamp(rigidbody.velocity.z, 0, ref walkFrictionVelocityZ, walkFriction));
+
 			rigidbody.AddRelativeForce(horizontal * Time.fixedDeltaTime * walkAcceleration, 0,
 			                           vertical * Time.fixedDeltaTime * walkAcceleration);
 
 			animator.SetFloat("speed", vertical);
-
 		}
 		
 		else
@@ -80,6 +79,14 @@ public class PlayerController : MonoBehaviour
 			                           vertical * Time.fixedDeltaTime * walkAcceleration * walkAccelerationAirRatio);
 			animator.SetFloat("speed", 0.0f);
 		}
+	}
+
+	private void RotatePlayer()
+	{
+		Vector3 direction = new Vector3(Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
+		Quaternion rotate = Quaternion.LookRotation (direction, Vector3.up);
+		Quaternion rotation = Quaternion.Lerp (rigidbody.rotation, rotate, turnSpeed * Time.deltaTime);
+		rigidbody.MoveRotation (rotation);
 	}
 
 	private void Crouch()
@@ -122,4 +129,5 @@ public class PlayerController : MonoBehaviour
 
 	
 }
+
 

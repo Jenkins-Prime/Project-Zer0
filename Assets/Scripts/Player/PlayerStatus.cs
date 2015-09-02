@@ -2,9 +2,12 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class PlayerStatus : MonoBehaviour {
-	[SerializeField] int currentHearts = 3;
-	int maxHearts = 3;
+public class PlayerStatus : MonoBehaviour 
+{
+	[HideInInspector]
+	public int currentHearts = 3;
+	[HideInInspector]
+	public int maxHearts = 3;
 	[SerializeField] int lives = 2;
 	int maxLives = 10;
 	[SerializeField] int ammo = 0;
@@ -39,26 +42,26 @@ public class PlayerStatus : MonoBehaviour {
 		if(currentHearts >= maxHearts)
 		{
 			currentHearts = maxHearts;
-			return false;
+
 		}
 		
 		for(int i = 0; i < currentHearts; i++)
 		{
 			hearts[i].enabled = true;
 		}
-		
-		//Do gui stuff, play sound, etc actions
+
 		return true;
 	}
 	
 	public void LoseHealth(int amount) 
 	{
-		currentHearts-= amount;
+		currentHearts -= amount;
 		
 		if(currentHearts < 0)
 		{
 			currentHearts = 0;
 		}
+
 		int temp = currentHearts + amount;
 		for(int i = currentHearts; i < temp; i++)
 		{

@@ -10,9 +10,12 @@ public class PickupHeart : MonoBehaviour {
 		status = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
 	}
 	
-	void OnTriggerEnter (Collider other) {
-		if (other.tag == "Player") {
-			if(status.GainHealth(amount)) {
+	void OnTriggerEnter (Collider other) 
+	{
+		if (other.tag == "Player") 
+		{
+			if(status.GainHealth(amount)) 
+			{
 				gameObject.SetActive(false);
 				Invoke("ReActivate", 5);
 			}
