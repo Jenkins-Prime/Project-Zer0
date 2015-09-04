@@ -1,0 +1,282 @@
+fileFormatVersion: 2
+guid: ade8baa084162204ebedb07f1ea7f509
+timeCreated: 1441375184
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Body
+    100004: Body_0
+    100006: Boots
+    100008: Buttons
+    100010: Buttons_MeshPart0
+    100012: Buttons_MeshPart1
+    100014: Control
+    100016: Foot_L
+    100018: Foot_R
+    100020: Head
+    100022: Head_0
+    100024: Leg_L
+    100026: Leg_R
+    100028: //RootNode
+    400000: Armature
+    400002: Body
+    400004: Body_0
+    400006: Boots
+    400008: Buttons
+    400010: Buttons_MeshPart0
+    400012: Buttons_MeshPart1
+    400014: Control
+    400016: Foot_L
+    400018: Foot_R
+    400020: Head
+    400022: Head_0
+    400024: Leg_L
+    400026: Leg_R
+    400028: //RootNode
+    4300000: Body
+    4300002: Buttons_MeshPart0
+    4300004: Buttons_MeshPart1
+    4300006: Boots
+    4300008: Head
+    7400000: Snowie@Idle
+    7400002: ArmatureAction
+    7400004: Snowie@Walk
+    7400006: Snowie@EnemySpotted
+    9500000: //RootNode
+    13700000: Body
+    13700002: Boots
+    13700004: Buttons_MeshPart0
+    13700006: Buttons_MeshPart1
+    13700008: Head
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Snowie@Idle
+      takeName: Default Take
+      firstFrame: 5
+      lastFrame: 43
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body_0
+        weight: 1
+      - path: Armature/Control/Body_0/Head_0
+        weight: 1
+      - path: Armature/Control/Leg_L
+        weight: 1
+      - path: Armature/Control/Leg_L/Foot_L
+        weight: 1
+      - path: Armature/Control/Leg_R
+        weight: 1
+      - path: Armature/Control/Leg_R/Foot_R
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Boots
+        weight: 1
+      - path: Buttons
+        weight: 1
+      - path: Buttons/Buttons_MeshPart0
+        weight: 1
+      - path: Buttons/Buttons_MeshPart1
+        weight: 1
+      - path: Head
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Snowie@Walk
+      takeName: Default Take
+      firstFrame: 50
+      lastFrame: 81
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body_0
+        weight: 1
+      - path: Armature/Control/Body_0/Head_0
+        weight: 1
+      - path: Armature/Control/Leg_L
+        weight: 1
+      - path: Armature/Control/Leg_L/Foot_L
+        weight: 1
+      - path: Armature/Control/Leg_R
+        weight: 1
+      - path: Armature/Control/Leg_R/Foot_R
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Boots
+        weight: 1
+      - path: Buttons
+        weight: 1
+      - path: Buttons/Buttons_MeshPart0
+        weight: 1
+      - path: Buttons/Buttons_MeshPart1
+        weight: 1
+      - path: Head
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Snowie@EnemySpotted
+      takeName: Default Take
+      firstFrame: 85
+      lastFrame: 108
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Control
+        weight: 1
+      - path: Armature/Control/Body_0
+        weight: 1
+      - path: Armature/Control/Body_0/Head_0
+        weight: 1
+      - path: Armature/Control/Leg_L
+        weight: 1
+      - path: Armature/Control/Leg_L/Foot_L
+        weight: 1
+      - path: Armature/Control/Leg_R
+        weight: 1
+      - path: Armature/Control/Leg_R/Foot_R
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Boots
+        weight: 1
+      - path: Buttons
+        weight: 1
+      - path: Buttons/Buttons_MeshPart0
+        weight: 1
+      - path: Buttons/Buttons_MeshPart1
+        weight: 1
+      - path: Head
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

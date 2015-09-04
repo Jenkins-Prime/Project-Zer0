@@ -145,7 +145,7 @@ ModelImporter:
     13700004: JakeBody_Mesh_low
   materials:
     importMaterials: 1
-    materialName: 1
+    materialName: 0
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
