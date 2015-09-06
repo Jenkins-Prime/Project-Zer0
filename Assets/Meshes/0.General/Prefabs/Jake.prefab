@@ -567,8 +567,8 @@ GameObject:
   - 95: {fileID: 9520156}
   - 54: {fileID: 5444022}
   - 136: {fileID: 13632490}
-  - 114: {fileID: 11463866}
   - 114: {fileID: 11420642}
+  - 114: {fileID: 11452748}
   m_Layer: 0
   m_Name: Jake
   m_TagString: Player
@@ -1784,7 +1784,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!95 &9520156
 Animator:
@@ -1831,7 +1831,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &11463866
+--- !u!114 &11452748
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1839,17 +1839,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 158682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47fa68e0737ddf443909ed5885686280, type: 3}
+  m_Script: {fileID: 11500000, guid: 87e24de2e8621ff48b1ccde89d2fdf7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkAcceleration: 1000
-  walkFriction: .200000003
-  walkAccelerationAirRatio: .100000001
-  maxWalkSpeed: 3
-  jumpVelocity: 250
-  slopeLimit: 50
-  runtime: 5
-  grounded: 0
+  moveSpeed: 4
+  turnSpeed: 100
 --- !u!136 &13632490
 CapsuleCollider:
   m_ObjectHideFlags: 1

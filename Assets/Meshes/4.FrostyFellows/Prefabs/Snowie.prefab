@@ -116,6 +116,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 493368}
   - 95: {fileID: 9553966}
+  - 54: {fileID: 5444864}
+  - 136: {fileID: 13644382}
+  - 114: {fileID: 11452838}
+  - 114: {fileID: 11440776}
   m_Layer: 0
   m_Name: Snowie
   m_TagString: Untagged
@@ -425,6 +429,21 @@ Transform:
   - {fileID: 441102}
   m_Father: {fileID: 400590}
   m_RootOrder: 2
+--- !u!54 &5444864
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141730}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!95 &9553966
 Animator:
   serializedVersion: 3
@@ -434,7 +453,7 @@ Animator:
   m_GameObject: {fileID: 141730}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ade8baa084162204ebedb07f1ea7f509, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc23ee3666b52f340861e12a2d664f5a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -442,6 +461,47 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11440776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78f454fc9ed32445b7f6f3fba68c412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  rotationSpeed: 3
+  sightRange: 5
+  patrolRadius: 5
+  chaseRange: 10
+--- !u!114 &11452838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9371c86a4c23d2649b6f958548c8b3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+--- !u!136 &13644382
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .300000012
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: .5, z: 0}
 --- !u!137 &13711380
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
