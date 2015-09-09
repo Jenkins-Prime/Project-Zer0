@@ -571,7 +571,7 @@ GameObject:
   - 114: {fileID: 11452748}
   m_Layer: 0
   m_Name: Jake
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -953,6 +953,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &199244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 418090}
+  m_Layer: 0
+  m_Name: FollowPlayer
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400716
 Transform:
   m_ObjectHideFlags: 1
@@ -1059,6 +1074,18 @@ Transform:
   - {fileID: 425158}
   m_Father: {fileID: 424416}
   m_RootOrder: 0
+--- !u!4 &418090
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 436198}
+  m_RootOrder: 7
 --- !u!4 &421286
 Transform:
   m_ObjectHideFlags: 1
@@ -1202,6 +1229,7 @@ Transform:
   - {fileID: 491474}
   - {fileID: 454700}
   - {fileID: 461772}
+  - {fileID: 418090}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &437864
@@ -1842,8 +1870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e24de2e8621ff48b1ccde89d2fdf7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  turnSpeed: 100
 --- !u!136 &13632490
 CapsuleCollider:
   m_ObjectHideFlags: 1
