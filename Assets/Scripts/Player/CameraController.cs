@@ -3,25 +3,31 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour 
 {
+	public float cameraDistanceY;
+	public float cameraDistanceZ;
 
-	private Transform target;
-	private float distanceUp;
-	private float distanceAway;
+	private Transform player;
 	private float rotateSpeed;
+	private float moveSpeed;
+	private Vector3 cameraOffset;
+	private Quaternion playerLook;
+	private Vector3 smoothVelocity;
 	private Vector3 targetPosition;
 
 
 	
 	void Awake()
 	{
-		target = GameObject.FindGameObjectWithTag ("Player").transform;
-		distanceUp = 2.0f;
-		distanceAway = 5.0f;
-		rotateSpeed = 1.0f;
+		player = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 
 	void Start () 
 	{
+		cameraDistanceY = 1.40f;
+		cameraDistanceZ = 5.0f;
+		rotateSpeed = 2.0f;
+		moveSpeed = 0.1f;
+
 	}
 
 	void LateUpdate()
@@ -31,9 +37,13 @@ public class CameraController : MonoBehaviour
 
 	private void FollowTarget()
 	{
-		targetPosition = (target.position + target.up * distanceUp) - (target.forward * distanceAway);
-		transform.position = Vector3.Lerp (transform.position, targetPosition, Time.deltaTime * rotateSpeed);
-		transform.LookAt (target);
+		cameraOffset = new Vector3 (0.0f, cameraDistanceY, -cameraDistanceZ);
+		targetPosition = player.position + (transform.rotation * cameraOffset);
+		transform.position = Vector3.SmoothDamp (transform.position, targetPosition, ref smoothVelocity, moveSpeed);
+
+		//playerLook = Quaternion.LookRotation (player.position - transform.position);
+		//transform.rotation = Quaternion.Slerp (transform.rotation, playerLook, Time.deltaTime * rotateSpeed);
+
 	}
 
 

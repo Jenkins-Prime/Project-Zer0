@@ -8,23 +8,26 @@ public class CharacterController : MonoBehaviour
 	private float moveSpeed;
 	private float jumpVelocity;
 	private float slopeLimit;
+	private float rotationVelocity;
 	private bool isCrouching;
 	private bool isGrounded;
 
 
 	private Animator animator;                   
 	private Rigidbody rb;
+	private Transform cameraTransform;
 
 
 	void Awake ()
 	{
 		animator = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody> ();
+		cameraTransform = Camera.main.transform;
 	}
 
 	void Start()
 	{
-		moveSpeed = 100.0f;
+		moveSpeed = 200.0f;
 		turnSmoothing = 15.0f;
 		speedDampTime = 0.1f;
 		slopeLimit = 50.0f;
@@ -41,33 +44,33 @@ public class CharacterController : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		float h = Input.GetAxis("Horizontal");
-		float v = Input.GetAxis("Vertical");
+		float horizontal = Input.GetAxis("Horizontal");
+		float vertical = Input.GetAxis("Vertical");
 		
-		MovementManagement(h, v);
+		Move(horizontal, vertical);
 		Jump ();
 	}
 	
-	void MovementManagement (float horizontal, float vertical)
+	void Move(float horizontal, float vertical)
 	{
 		if(horizontal != 0f || vertical != 0f)
 		{
-			Rotating(horizontal, vertical);
+			Rotate(horizontal, vertical);
 			CheckMovement(horizontal, vertical);
 		}
 		else
 		{
-			animator.SetFloat("speed", 0);
+			animator.SetFloat("speed", 0.0f);
 		}
 			
 	}
 
-	private void Rotating (float horizontal, float vertical)
+	private void Rotate(float horizontal, float vertical)
 	{
 		Vector3 targetDirection = new Vector3(horizontal, 0f, vertical);
-		Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
+		//Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
+		Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
 		Quaternion newRotation = Quaternion.Lerp(rb.rotation, targetRotation, turnSmoothing * Time.deltaTime);
-
 		rb.MoveRotation(newRotation);
 	}
 
@@ -99,6 +102,10 @@ public class CharacterController : MonoBehaviour
 				animator.SetFloat("speed", 1.0f);
 			}
 		}
+		else
+		{
+			animator.SetFloat("speed", 0.5f);
+		}
 
 	}
 
@@ -127,6 +134,10 @@ public class CharacterController : MonoBehaviour
 		}
 	}
 
+	private void RotatePlayer()
+	{
+
+	}
 
 	void OnCollisionStay(Collision collision)
 	{
