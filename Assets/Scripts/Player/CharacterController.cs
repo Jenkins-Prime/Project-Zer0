@@ -13,6 +13,7 @@ public class CharacterController : MonoBehaviour
 	private bool isGrounded;
 
 
+
 	private Animator animator;                   
 	private Rigidbody rb;
 	private Transform cameraTransform;
@@ -22,7 +23,7 @@ public class CharacterController : MonoBehaviour
 	{
 		animator = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody> ();
-		cameraTransform = Camera.main.transform;
+		cameraTransform = GameObject.FindGameObjectWithTag ("MainCamera").transform;
 	}
 
 	void Start()
@@ -67,7 +68,9 @@ public class CharacterController : MonoBehaviour
 
 	private void Rotate(float horizontal, float vertical)
 	{
-		Vector3 targetDirection = new Vector3(horizontal, 0f, vertical);
+		Vector3 targetDirection = new Vector3(horizontal, 0.0f, vertical);
+		targetDirection = Camera.main.transform.TransformDirection (targetDirection);
+		targetDirection.y = 0.0f;
 		//Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
 		Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
 		Quaternion newRotation = Quaternion.Lerp(rb.rotation, targetRotation, turnSmoothing * Time.deltaTime);
@@ -132,11 +135,6 @@ public class CharacterController : MonoBehaviour
 		{
 			rb.AddForce(0, jumpVelocity, 0);
 		}
-	}
-
-	private void RotatePlayer()
-	{
-
 	}
 
 	void OnCollisionStay(Collision collision)

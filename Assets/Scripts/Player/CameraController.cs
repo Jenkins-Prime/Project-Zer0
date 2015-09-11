@@ -1,50 +1,45 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class CameraController : MonoBehaviour 
 {
-	public float cameraDistanceY;
-	public float cameraDistanceZ;
-
 	private Transform player;
-	private float rotateSpeed;
-	private float moveSpeed;
-	private Vector3 cameraOffset;
+	private float cameraHeight;
+	private float cameraDistance;
+	private float smoothMove;
+	private float smoothRotate;
 	private Quaternion playerLook;
-	private Vector3 smoothVelocity;
-	private Vector3 targetPosition;
+	private Vector3 playerPosition;
+	private Vector3 velocityReference;
+	private Vector3 cameraOffset;
 
-
-	
 	void Awake()
 	{
-		player = GameObject.FindGameObjectWithTag ("Player").transform;
+		player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 
-	void Start () 
+	void Start()
 	{
-		cameraDistanceY = 1.40f;
-		cameraDistanceZ = 5.0f;
-		rotateSpeed = 2.0f;
-		moveSpeed = 0.1f;
-
+		cameraHeight = 1.40f;
+		cameraDistance = 5.0f;
+		smoothMove = 1.0f;
+		smoothRotate = 100.0f;
 	}
 
 	void LateUpdate()
 	{
-		FollowTarget ();
+		FollowPlayer();
 	}
 
-	private void FollowTarget()
+	private void FollowPlayer()
 	{
-		cameraOffset = new Vector3 (0.0f, cameraDistanceY, -cameraDistanceZ);
-		targetPosition = player.position + (transform.rotation * cameraOffset);
-		transform.position = Vector3.SmoothDamp (transform.position, targetPosition, ref smoothVelocity, moveSpeed);
+		cameraOffset = new Vector3 (0.0f, cameraHeight, -cameraDistance);
+		playerPosition = player.position + (player.rotation * cameraOffset);
+		transform.position = Vector3.Lerp (transform.position, playerPosition, Time.deltaTime * smoothMove);
 
-		//playerLook = Quaternion.LookRotation (player.position - transform.position);
-		//transform.rotation = Quaternion.Slerp (transform.rotation, playerLook, Time.deltaTime * rotateSpeed);
-
+		playerLook = Quaternion.LookRotation (player.position - transform.position);
+		transform.rotation = Quaternion.Slerp (transform.rotation, playerLook, smoothRotate);
+		transform.LookAt (player);
 	}
-
-
 }
+

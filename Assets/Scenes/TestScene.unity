@@ -1572,8 +1572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 056a348be1054344c9a4f217eae99b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraDistanceY: 0
-  cameraDistanceZ: 0
 --- !u!1 &613505850
 GameObject:
   m_ObjectHideFlags: 0
@@ -4884,6 +4882,22 @@ Prefab:
       propertyPath: DirectionObject
       value: 
       objectReference: {fileID: 1104481407}
+    - target: {fileID: 199244, guid: 27a5bc7f7de72ac4ebc32d9317ae16ed, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 158682, guid: 27a5bc7f7de72ac4ebc32d9317ae16ed, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452748, guid: 27a5bc7f7de72ac4ebc32d9317ae16ed, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444022, guid: 27a5bc7f7de72ac4ebc32d9317ae16ed, type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27a5bc7f7de72ac4ebc32d9317ae16ed, type: 2}
   m_IsPrefabParent: 0
