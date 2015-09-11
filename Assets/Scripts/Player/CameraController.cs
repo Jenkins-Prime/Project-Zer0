@@ -8,10 +8,12 @@ public class CameraController : MonoBehaviour
 	private float cameraDistance;
 	private float smoothMove;
 	private float smoothRotate;
+	private float targetRotationX;
 	private Quaternion playerLook;
 	private Vector3 playerPosition;
-	private Vector3 velocityReference;
 	private Vector3 cameraOffset;
+	private Vector3 playerRotation;
+	private bool isRotating;
 
 	void Awake()
 	{
@@ -20,26 +22,57 @@ public class CameraController : MonoBehaviour
 
 	void Start()
 	{
+		isRotating = false;
 		cameraHeight = 1.40f;
-		cameraDistance = 5.0f;
+		cameraDistance = 1.0f;
 		smoothMove = 1.0f;
-		smoothRotate = 100.0f;
+		smoothRotate = 50.0f;
 	}
 
 	void LateUpdate()
 	{
 		FollowPlayer();
+		OrbitPlayer ();
+		LerpBackToOriginalPosition();
 	}
 
 	private void FollowPlayer()
 	{
-		cameraOffset = new Vector3 (0.0f, cameraHeight, -cameraDistance);
-		playerPosition = player.position + (player.rotation * cameraOffset);
-		transform.position = Vector3.Lerp (transform.position, playerPosition, Time.deltaTime * smoothMove);
+		cameraOffset = new Vector3 (0, cameraHeight, -cameraDistance);
+		transform.position = player.position + cameraOffset;
 
-		playerLook = Quaternion.LookRotation (player.position - transform.position);
-		transform.rotation = Quaternion.Slerp (transform.rotation, playerLook, smoothRotate);
-		transform.LookAt (player);
+		if(Input.GetButton("Camera") && !isRotating)
+		{
+			isRotating = true;
+		}
+
+		if(Input.GetButtonUp("Camera") && isRotating)
+		{
+			isRotating = false;
+		}
+	}
+
+	private void OrbitPlayer()
+	{
+		if(isRotating)
+		{
+			playerRotation = player.rotation * cameraOffset;
+			transform.position = player.position + cameraOffset;
+			targetRotationX -= Input.GetAxis("Camera") * smoothRotate * Time.smoothDeltaTime;
+			transform.rotation = Quaternion.Euler(0, targetRotationX, transform.rotation.z);
+
+
+		}
+	}
+
+	private void LerpBackToOriginalPosition()
+	{
+		if(Input.GetButton ("Camera Origin"))
+		{
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, player.localRotation, smoothRotate * Time.fixedDeltaTime);
+			targetRotationX = 0.0f;
+
+		}
 	}
 }
 

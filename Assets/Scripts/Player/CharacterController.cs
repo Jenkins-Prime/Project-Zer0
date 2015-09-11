@@ -8,15 +8,17 @@ public class CharacterController : MonoBehaviour
 	private float moveSpeed;
 	private float jumpVelocity;
 	private float slopeLimit;
-	private float rotationVelocity;
 	private bool isCrouching;
 	private bool isGrounded;
+	private Vector3 targetDirection;
+	private Vector3 targetMoveForward;
 
 
 
 	private Animator animator;                   
 	private Rigidbody rb;
 	private Transform cameraTransform;
+
 
 
 	void Awake ()
@@ -58,6 +60,7 @@ public class CharacterController : MonoBehaviour
 		{
 			Rotate(horizontal, vertical);
 			CheckMovement(horizontal, vertical);
+			animator.SetFloat("speed", 1.0f);
 		}
 		else
 		{
@@ -68,10 +71,8 @@ public class CharacterController : MonoBehaviour
 
 	private void Rotate(float horizontal, float vertical)
 	{
-		Vector3 targetDirection = new Vector3(horizontal, 0.0f, vertical);
+		targetDirection = new Vector3(horizontal, 0.0f, vertical);
 		targetDirection = Camera.main.transform.TransformDirection (targetDirection);
-		targetDirection.y = 0.0f;
-		//Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
 		Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
 		Quaternion newRotation = Quaternion.Lerp(rb.rotation, targetRotation, turnSmoothing * Time.deltaTime);
 		rb.MoveRotation(newRotation);
@@ -81,35 +82,27 @@ public class CharacterController : MonoBehaviour
 	{
 		if(isGrounded)
 		{
+			targetMoveForward = Camera.main.transform.TransformDirection(Vector3.forward);
 			if(vertical < 0)
 			{
 				rb.velocity = -transform.forward * vertical * moveSpeed * Time.fixedDeltaTime;
-				animator.SetFloat("speed", 1.0f);
 			}
 			
 			if(vertical > 0)
 			{
-				rb.velocity = transform.forward * vertical * moveSpeed * Time.fixedDeltaTime;
-				animator.SetFloat("speed", 1.0f);
+				rb.velocity = targetMoveForward * vertical * moveSpeed * Time.fixedDeltaTime;
 			}
 			
 			if(horizontal < 0)
 			{
-				rb.velocity = transform.forward * -horizontal * moveSpeed * Time.fixedDeltaTime;
-				animator.SetFloat("speed", 1.0f);
+				rb.velocity = -transform.forward * horizontal * moveSpeed * Time.fixedDeltaTime;
 			}
 			
 			if(horizontal > 0)
 			{
 				rb.velocity = transform.forward * horizontal * moveSpeed * Time.fixedDeltaTime;
-				animator.SetFloat("speed", 1.0f);
 			}
 		}
-		else
-		{
-			animator.SetFloat("speed", 0.5f);
-		}
-
 	}
 
 
