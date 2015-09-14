@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
 	private float smoothMove;
 	private float smoothRotate;
 	private float targetRotationX;
+	private bool isRotating;
 
 	void Awake()
 	{
@@ -15,8 +16,9 @@ public class CameraController : MonoBehaviour
 
 	void Start()
 	{
-		smoothMove = 30.0f;
+		smoothMove = 70.0f;
 		smoothRotate = 50.0f;
+		isRotating = false;
 	}
 
 	void LateUpdate()
@@ -24,6 +26,17 @@ public class CameraController : MonoBehaviour
 		FollowPlayer();
 		OrbitPlayer ();
 		LerpBackToOriginalPosition();
+
+		if(isRotating)
+		{
+			transform.rotation = Quaternion.RotateTowards(transform.rotation, player.rotation, smoothMove * Time.fixedDeltaTime);
+			targetRotationX = 0.0f;
+		}
+		
+		if(transform.rotation == player.rotation)
+		{
+			isRotating = false;
+		}
 	}
 
 	private void FollowPlayer()
@@ -42,10 +55,9 @@ public class CameraController : MonoBehaviour
 
 	private void LerpBackToOriginalPosition()
 	{
-		if(Input.GetButton ("Camera Origin"))
+		if(Input.GetButton("Camera Origin"))
 		{
-			transform.rotation = Quaternion.RotateTowards(transform.rotation, player.rotation, smoothMove * Time.fixedDeltaTime);
-			targetRotationX = 0.0f;
+			isRotating = true;
 		}
 	}
 }
