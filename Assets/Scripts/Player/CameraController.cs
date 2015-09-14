@@ -4,12 +4,9 @@ using System.Collections;
 public class CameraController : MonoBehaviour 
 {
 	private Transform player;
-	private float cameraHeight;
-	private float cameraDistance;
 	private float smoothMove;
 	private float smoothRotate;
 	private float targetRotationX;
-	private Vector3 cameraOffset;
 
 	void Awake()
 	{
@@ -18,9 +15,7 @@ public class CameraController : MonoBehaviour
 
 	void Start()
 	{
-		cameraHeight = 1.40f;
-		cameraDistance = 1.0f;
-		smoothMove = 1.0f;
+		smoothMove = 30.0f;
 		smoothRotate = 50.0f;
 	}
 
@@ -33,7 +28,6 @@ public class CameraController : MonoBehaviour
 
 	private void FollowPlayer()
 	{
-		//cameraOffset = new Vector3 (0, cameraHeight, -cameraDistance);
 		transform.position = player.position;
 	}
 
@@ -41,9 +35,8 @@ public class CameraController : MonoBehaviour
 	{
 		if(Input.GetButton("Camera"))
 		{
-			transform.position = player.position + cameraOffset;
 			targetRotationX -= Input.GetAxis("Camera") * smoothRotate * Time.smoothDeltaTime;
-			transform.rotation = Quaternion.Euler(transform.rotation.x, targetRotationX, transform.rotation.z);
+			transform.rotation = Quaternion.Euler(0, targetRotationX, 0);
 		}
 	}
 
@@ -51,7 +44,7 @@ public class CameraController : MonoBehaviour
 	{
 		if(Input.GetButton ("Camera Origin"))
 		{
-			transform.rotation = Quaternion.Lerp(transform.rotation, player.rotation, smoothMove * Time.fixedDeltaTime);
+			transform.rotation = Quaternion.RotateTowards(transform.rotation, player.rotation, smoothMove * Time.fixedDeltaTime);
 			targetRotationX = 0.0f;
 		}
 	}
