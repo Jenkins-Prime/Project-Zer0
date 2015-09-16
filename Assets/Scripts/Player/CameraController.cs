@@ -6,7 +6,6 @@ public class CameraController : MonoBehaviour
 	private Transform player;
 	private float smoothMove;
 	private float smoothRotate;
-	private float targetRotationX;
 	private bool isRotating;
 
 	void Awake()
@@ -30,7 +29,6 @@ public class CameraController : MonoBehaviour
 		if(isRotating)
 		{
 			transform.rotation = Quaternion.RotateTowards(transform.rotation, player.rotation, smoothMove * Time.fixedDeltaTime);
-			targetRotationX = 0.0f;
 		}
 		
 		if(transform.rotation == player.rotation)
@@ -48,8 +46,7 @@ public class CameraController : MonoBehaviour
 	{
 		if(Input.GetButton("Camera"))
 		{
-			targetRotationX -= Input.GetAxis("Camera") * smoothRotate * Time.smoothDeltaTime;
-			transform.rotation = Quaternion.Euler(0, targetRotationX, 0);
+			transform.RotateAround(transform.position, Vector3.up * Input.GetAxis ("Camera"), smoothRotate * Time.deltaTime);
 		}
 	}
 

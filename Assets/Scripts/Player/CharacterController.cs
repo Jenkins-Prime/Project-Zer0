@@ -49,7 +49,6 @@ public class CharacterController : MonoBehaviour
 	{
 		float horizontal = Input.GetAxis("Horizontal");
 		float vertical = Input.GetAxis("Vertical");
-		
 		Move(horizontal, vertical);
 		Jump ();
 	}
