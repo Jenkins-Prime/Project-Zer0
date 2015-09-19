@@ -74,6 +74,8 @@ public class CharacterController : MonoBehaviour
 		targetDirection = Camera.main.transform.TransformDirection (targetDirection);
 		Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
 		Quaternion newRotation = Quaternion.Lerp(rb.rotation, targetRotation, turnSmoothing * Time.deltaTime);
+		Vector3 offsetRotation = new Vector3 (0.0f, newRotation.eulerAngles.y, 0.0f);
+		newRotation.eulerAngles = offsetRotation;
 		rb.MoveRotation(newRotation);
 	}
 
@@ -82,6 +84,7 @@ public class CharacterController : MonoBehaviour
 		if(isGrounded)
 		{
 			targetMoveForward = Camera.main.transform.TransformDirection(Vector3.forward);
+			Debug.Log(targetMoveForward);
 			if(vertical < 0)
 			{
 				rb.velocity = -transform.forward * vertical * moveSpeed * Time.fixedDeltaTime;
