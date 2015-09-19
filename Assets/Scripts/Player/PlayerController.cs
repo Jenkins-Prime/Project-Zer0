@@ -3,186 +3,138 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour 
 {
-	private bool grounded = false;
-	private Vector3 groundVelocity;
-	private CapsuleCollider capsule;
-	private Rigidbody rBody;
+	public float speed;
+	public float gravity;
+	public float maxVelocityChange;
+	public float jumpHeight;
 
-	private bool jumpFlag = false;
-
-	public float walkSpeed = 8.0f;
-	public float walkBackwardSpeed = 4.0f;
-	public float runSpeed = 14.0f;
-	public float runBackwardSpeed = 6.0f;
-	public float sidestepSpeed = 8.0f;
-	public float runSidestepSpeed = 12.0f;
-	public float maxVelocityChange = 10.0f;
-
-	public float inAirControl = 0.1f;
-	public float jumpHeight = 2.0f;
-
-	public bool canRunSidestep = true;
-	public bool canJump = true;
-	public bool canRun = true;
-
-	private Vector3 inputVector;
+	private bool grounded;
+	private bool isCrouching;
+	private Vector3 targetVelocity;
 	private float turnSpeed;
+	private float slopeLimit;
 
-	void Awake()
+	private Rigidbody rBody;
+	private Animator animator;
+	
+	
+	
+	void Awake () 
 	{
-		capsule = GetComponent<CapsuleCollider>();
 		rBody = GetComponent<Rigidbody> ();
+		animator = GetComponent<Animator> ();
 		rBody.freezeRotation = true;
-		rBody.useGravity = true;
+		rBody.useGravity = false;
 	}
 
 	void Start()
 	{
-		turnSpeed = 100.0f;
+		speed = 4.0f;
+		gravity = 10.0f;
+		maxVelocityChange = 10.0f;
+		jumpHeight = 2.0f;
+		turnSpeed = 50.0f;
+		slopeLimit = 50.0f;
+		grounded = false;
+		isCrouching = false;
 	}
 
 	void Update()
 	{
-		if (Input.GetButtonDown("Jump"))
-		{
-			jumpFlag = true;
-		}
+		Crouch();
 	}
 	
-
-	void FixedUpdate()
+	void FixedUpdate () 
 	{
-		inputVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-		
+		MovePlayer ();
+		Jump ();
 
-		if (grounded)
+		grounded = false;
+	}
+
+	private void MovePlayer()
+	{
+		if (grounded) 
 		{
-			var velocityChange = CalculateVelocityChange(inputVector);
-			rBody.AddForce(velocityChange, ForceMode.VelocityChange);
-			Rotate(inputVector.x, inputVector.z);
+			targetVelocity = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
+			//targetVelocity = transform.TransformDirection (targetVelocity).normalized;
+			targetVelocity *= speed;
+			Rotate (targetVelocity.x, targetVelocity.z);
 
-			if (canJump && jumpFlag)
-			{
-				jumpFlag = false;
-				rBody.velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, GetComponent<Rigidbody>().velocity.y + CalculateJumpVerticalSpeed(), GetComponent<Rigidbody>().velocity.z);
-			}
-
-			grounded = false;
+			// Apply a force that attempts to reach our target velocity
+			Vector3 velocity = rBody.velocity;
+			Vector3 velocityChange = (targetVelocity - velocity);
+			velocityChange.x = Mathf.Clamp (velocityChange.x, -maxVelocityChange, maxVelocityChange);
+			velocityChange.z = Mathf.Clamp (velocityChange.z, -maxVelocityChange, maxVelocityChange);
+			velocityChange.y = 0;
+			rBody.AddForce (velocityChange, ForceMode.VelocityChange);
 		}
 		else
 		{
-			var velocityChange = transform.TransformDirection(inputVector) * inAirControl;
-			rBody.AddForce(velocityChange, ForceMode.VelocityChange);
+			rBody.AddForce(new Vector3 (0, -gravity * rBody.mass, 0));
 		}
 	}
 
-	void OnCollisionExit(Collision collision)
+	private void Crouch()
 	{
-		if (collision.transform == transform.parent)
-		{
-			transform.parent = null;
+		if(Input.GetButton("Crouch") && grounded)
+		{	
+			isCrouching = true;
+			animator.SetBool ("Crouching", true);
 		}
-	}
-
-	void OnCollisionStay(Collision col)
-	{
-		TrackGrounded(col);
-	}
-	
-	void OnCollisionEnter(Collision col)
-	{
-		TrackGrounded(col);
-	}
-
-
-	private Vector3 CalculateVelocityChange(Vector3 inputVector)
-	{
-		var relativeVelocity = Camera.main.transform.TransformDirection(inputVector);
-
-		if (inputVector.z > 0)
-		{
-
-			relativeVelocity.z *= (canRun && Input.GetButton("Sprint")) ? runSpeed : walkSpeed;
-		}
-		else
-		{
-			relativeVelocity.z *= (canRun && Input.GetButton("Sprint")) ? runBackwardSpeed : walkBackwardSpeed;
-		}
-		relativeVelocity.x *= (canRunSidestep && Input.GetButton("Sprint")) ? runSidestepSpeed : sidestepSpeed;
-
-		var currRelativeVelocity = GetComponent<Rigidbody>().velocity - groundVelocity;
-		var velocityChange = relativeVelocity - currRelativeVelocity;
-		velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
-		velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
-		velocityChange.y = 0;
 		
-		return velocityChange;
-	}
-
-	private float CalculateJumpVerticalSpeed()
-	{
-		return Mathf.Sqrt(2f * jumpHeight * Mathf.Abs(Physics.gravity.y));
-	}
-
-	private void TrackGrounded(Collision collision)
-	{
-		var maxHeight = capsule.bounds.min.y + capsule.radius * .9f;
-		foreach (var contact in collision.contacts)
+		if(Input.GetButtonUp("Crouch") && grounded)
 		{
-			if (contact.point.y < maxHeight)
-			{
-				if (isKinematic(collision))
-				{
-					groundVelocity = collision.rigidbody.velocity;
-					transform.parent = collision.transform;
-				}
-				else if (isStatic(collision))
-				{
-					transform.parent = collision.transform;
-				}
-				else
-				{
-					groundVelocity = Vector3.zero;
-				}
-
-				grounded = true;
-			}
-			
-			break;
+			isCrouching = false;
+			animator.SetBool ("Crouching", false);
 		}
 	}
-	
-	private bool isKinematic(Collision collision)
-	{
-		return isKinematic(GetComponent<Collider>().transform);
-	}
-	
-	private bool isKinematic(Transform transform)
-	{
-		return transform.GetComponent<Rigidbody>() && transform.GetComponent<Rigidbody>().isKinematic;
-	}
-	
-	private bool isStatic(Collision collision)
-	{
-		return isStatic(collision.transform);
-	}
-	
-	private bool isStatic(Transform transform)
-	{
-		return transform.gameObject.isStatic;
-	}
+
+
 
 	private void Rotate(float horizontal, float vertical)
 	{
-		if(inputVector != Vector3.zero)
+		if(targetVelocity != Vector3.zero)
 		{
-			inputVector = new Vector3(horizontal, 0.0f, vertical);
-			inputVector = Camera.main.transform.TransformDirection (inputVector);
-			Quaternion targetRotation = Quaternion.LookRotation(inputVector);
+			targetVelocity = new Vector3(horizontal, 0.0f, vertical);
+			targetVelocity = Camera.main.transform.TransformDirection (targetVelocity);
+			Quaternion targetRotation = Quaternion.LookRotation(targetVelocity);
 			Quaternion newRotation = Quaternion.Lerp(rBody.rotation, targetRotation, turnSpeed * Time.deltaTime);
 			rBody.MoveRotation(newRotation);
 		}
 
+	}
+
+
+	private void Jump()
+	{
+		if (Input.GetButton ("Jump") && grounded) 
+		{
+			rBody.velocity = new Vector3 (rBody.velocity.x, CalculateJumpVerticalSpeed (), rBody.velocity.z);
+		}
+	}
+	
+	void OnCollisionStay(Collision collision)
+	{
+		foreach(ContactPoint contact in collision.contacts)
+		{
+			if(Vector3.Angle(contact.normal, Vector3.up) < slopeLimit)
+			{
+				grounded = true;
+			}
+		}
+	}
+
+	void OnCollisionExit()
+	{
+		grounded = false;
+	}
+
+	
+	float CalculateJumpVerticalSpeed () 
+	{
+
+		return Mathf.Sqrt(2 * jumpHeight * gravity);
 	}
 }
 

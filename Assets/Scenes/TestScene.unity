@@ -490,18 +490,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcb4451ef2971a4c921c54f3f1da022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 4
-  walkBackwardSpeed: 4
-  runSpeed: 14
-  runBackwardSpeed: 6
-  sidestepSpeed: 8
-  runSidestepSpeed: 12
+  speed: 10
+  gravity: 10
   maxVelocityChange: 10
-  inAirControl: .100000001
   jumpHeight: 2
-  canRunSidestep: 1
-  canJump: 1
-  canRun: 1
 --- !u!4 &155838996 stripped
 Transform:
   m_PrefabParentObject: {fileID: 478180, guid: ee48d09b1d75c0f44b1c3078949d400f, type: 2}
@@ -5123,6 +5115,10 @@ Prefab:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: f7dbf811fc9b8744da59f9256700e5a8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2585afa4b78d82948b2bbcd565807087, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7dbf811fc9b8744da59f9256700e5a8, type: 3}
   m_IsPrefabParent: 0
