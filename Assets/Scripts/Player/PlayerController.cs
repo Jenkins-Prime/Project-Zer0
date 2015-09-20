@@ -8,11 +8,17 @@ public class PlayerController : MonoBehaviour
 	public float maxVelocityChange;
 	public float jumpHeight;
 
+	[SerializeField]
 	private bool grounded;
 	private bool isCrouching;
+	[SerializeField]
+	private bool isJumping;
+	private bool isInAir;
 	private Vector3 targetVelocity;
 	private float turnSpeed;
 	private float slopeLimit;
+	private int jumpTime;
+	private int timeOnGround;
 
 	private Rigidbody rBody;
 	private Animator animator;
@@ -32,11 +38,14 @@ public class PlayerController : MonoBehaviour
 		speed = 4.0f;
 		gravity = 10.0f;
 		maxVelocityChange = 10.0f;
-		jumpHeight = 2.0f;
+		jumpHeight = 0.5f;
 		turnSpeed = 50.0f;
 		slopeLimit = 50.0f;
+		timeOnGround = 1;
 		grounded = false;
 		isCrouching = false;
+		isInAir = false;
+		isJumping = false;
 	}
 
 	void Update()
@@ -48,18 +57,17 @@ public class PlayerController : MonoBehaviour
 	{
 		MovePlayer ();
 		Jump ();
-
-		grounded = false;
 	}
 
 	private void MovePlayer()
 	{
 		if (grounded) 
 		{
+			animator.SetBool("onGround", true);
 			targetVelocity = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
 			//targetVelocity = transform.TransformDirection (targetVelocity).normalized;
 			targetVelocity *= speed;
-			Rotate (targetVelocity.x, targetVelocity.z);
+
 
 			// Apply a force that attempts to reach our target velocity
 			Vector3 velocity = rBody.velocity;
@@ -68,11 +76,22 @@ public class PlayerController : MonoBehaviour
 			velocityChange.z = Mathf.Clamp (velocityChange.z, -maxVelocityChange, maxVelocityChange);
 			velocityChange.y = 0;
 			rBody.AddForce (velocityChange, ForceMode.VelocityChange);
+			isJumping = true;
+			if(targetVelocity != Vector3.zero)
+			{
+				animator.SetFloat("speed", 1.0f);
+			}
+			else
+			{
+				animator.SetFloat("speed", 0.0f);
+			}
 		}
 		else
 		{
 			rBody.AddForce(new Vector3 (0, -gravity * rBody.mass, 0));
 		}
+
+		Rotate (targetVelocity.x, targetVelocity.z);
 	}
 
 	private void Crouch()
@@ -108,10 +127,18 @@ public class PlayerController : MonoBehaviour
 
 	private void Jump()
 	{
-		if (Input.GetButton ("Jump") && grounded) 
+		if (!Input.GetButton("Jump") && grounded && isJumping) 
 		{
-			rBody.velocity = new Vector3 (rBody.velocity.x, CalculateJumpVerticalSpeed (), rBody.velocity.z);
+			jumpTime++;
 		}
+		else if(jumpTime >= timeOnGround)
+		{
+			isJumping = false;
+			animator.SetBool("onGround", false);
+			rBody.velocity = new Vector3 (rBody.velocity.x, CalculateJumpVerticalSpeed (), rBody.velocity.z);
+			jumpTime = 0;
+		}
+
 	}
 	
 	void OnCollisionStay(Collision collision)
@@ -128,6 +155,7 @@ public class PlayerController : MonoBehaviour
 	void OnCollisionExit()
 	{
 		grounded = false;
+		isInAir = true;
 	}
 
 	

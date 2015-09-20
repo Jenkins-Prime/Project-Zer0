@@ -45,6 +45,7 @@ public class CameraController : MonoBehaviour
 
 	void LateUpdate()
 	{
+
 		//originalPosition = new Vector3 (0, player.position.y + cameraHeight, -Camera.main.transform.position.z);
 		//desiredPosition = new Vector3 (0, player.position.y + cameraHeight, -cameraDistance - 10.0f);
 
@@ -64,7 +65,7 @@ public class CameraController : MonoBehaviour
 	
 	private void FollowPlayer()
 	{
-		//transform.position = player.position + originalPosition;
+		//transform.position = player.position + ori;
 	}
 
 	private void OrbitPlayer()
@@ -75,7 +76,6 @@ public class CameraController : MonoBehaviour
 			transform.RotateAround(player.position, Vector3.up * Input.GetAxis ("Camera"), smoothMove * Time.deltaTime);
 			originalPosition = transform.position - player.position;
 		}
-
 	}
 
 	private void LerpBackToOriginalPosition()

@@ -6,11 +6,13 @@ public class DamageScript : MonoBehaviour {
 	float hitDelay = 2.0f;
 	float hitAllowed = 0f;
 	PlayerStatus status;
+	private Animator animator;
 
 	// Use this for initialization
-	void Start () 
+	void Awake () 
 	{
 		status = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
+		animator = GetComponent<Animator> ();
 	}
 	
 	void OnCollisionStay(Collision other) 
@@ -19,9 +21,11 @@ public class DamageScript : MonoBehaviour {
 		{
 			if(Time.fixedTime > hitAllowed) 
 			{
-				status.LoseHealth(damage);
+				animator.SetBool("isHurt", true);
+				status.IncreaseMaxHealth(damage);
 				hitAllowed = Time.fixedTime + hitDelay;
 			}
 		}
 	}
+	
 }
