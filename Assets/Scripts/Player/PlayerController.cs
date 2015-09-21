@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
 
 	private void Jump()
 	{
-		if (!Input.GetButton("Jump") && grounded && isJumping) 
+		if (!Input.GetButton("Jump") && isJumping) 
 		{
 			jumpTime++;
 		}
