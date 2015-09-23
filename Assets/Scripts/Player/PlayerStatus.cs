@@ -65,7 +65,6 @@ public class PlayerStatus : MonoBehaviour
 		int temp = currentHearts + amount;
 		for(int i = currentHearts; i < temp; i++)
 		{
-			Debug.Log ("Lost" + i + " hearts");
 			hearts[i].enabled = false;
 		}
 	}

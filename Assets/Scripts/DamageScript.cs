@@ -22,7 +22,7 @@ public class DamageScript : MonoBehaviour {
 			if(Time.fixedTime > hitAllowed) 
 			{
 				animator.SetBool("isHurt", true);
-				status.IncreaseMaxHealth(damage);
+				status.LoseHealth(damage);
 				hitAllowed = Time.fixedTime + hitDelay;
 			}
 		}
