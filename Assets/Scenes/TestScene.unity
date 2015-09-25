@@ -365,6 +365,7 @@ MonoBehaviour:
   cameraDistance: 3
   desiredCameraHeight: 0
   desiredCameraDistance: 0
+  isColliding: 0
 --- !u!1 &89505141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,6 +1131,7 @@ MonoBehaviour:
   cameraDistance: 0
   desiredCameraHeight: 0
   desiredCameraDistance: 0
+  isColliding: 0
 --- !u!54 &361319988
 Rigidbody:
   m_ObjectHideFlags: 0

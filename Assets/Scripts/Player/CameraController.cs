@@ -16,6 +16,7 @@ public class CameraController : MonoBehaviour
 	private Vector3 desiredPosition;
 	private Vector3 originalPosition;
 	private bool isRotating;
+	public bool isColliding;
 
 	void Awake()
 	{
@@ -27,11 +28,12 @@ public class CameraController : MonoBehaviour
 		smoothMove = 1.0f;
 		smoothRotate = 100.0f;
 		cameraHeight = 1.0f;
-		desiredCameraHeight = 1.0f;
+		desiredCameraHeight = 0.58f;
 		cameraDistance = 3.0f;
-		desiredCameraDistance = 2.0f;
+		desiredCameraDistance = 1.03f;
 		rayDistance = 1.0f;
 		isRotating = false;
+		isColliding = false;
 
 
 	}
@@ -41,7 +43,7 @@ public class CameraController : MonoBehaviour
 		originalPosition = new Vector3(0.0f, player.position.y + cameraHeight, -cameraDistance);
 		originalPosition = transform.TransformDirection (originalPosition);
 
-		desiredPosition = new Vector3(0.0f, player.position.y + cameraHeight, -desiredCameraHeight);
+		desiredPosition = new Vector3(0.0f, player.position.y + desiredCameraHeight, -desiredCameraDistance);
 		desiredPosition = transform.TransformDirection (desiredPosition);
 
 	}
@@ -67,8 +69,17 @@ public class CameraController : MonoBehaviour
 	
 	private void FollowPlayer()
 	{
-		transform.position = player.position + originalPosition;
-		originalPosition = transform.position - player.position;
+		if(!isColliding)
+		{
+			transform.position = Vector3.Lerp (transform.position, player.position + originalPosition, smoothMove);
+			originalPosition = transform.position - player.position;
+		}
+		else
+		{
+			transform.position = Vector3.Lerp (transform.position, player.position + desiredPosition, smoothMove);
+			desiredPosition = transform.position - player.position;
+		}
+
 	}
 
 	private void OrbitPlayer()
@@ -94,8 +105,10 @@ public class CameraController : MonoBehaviour
 
 		if(Physics.Linecast(Camera.main.transform.position, player.position, out hitInfo))
 		{
-			isRotating = true;
+			isColliding = true;
 		}
+	
+
 
 		Debug.DrawLine(Camera.main.transform.position, player.position);
 
