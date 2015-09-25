@@ -363,6 +363,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraHeight: 1
   cameraDistance: 3
+  desiredCameraHeight: 0
+  desiredCameraDistance: 0
 --- !u!1 &89505141
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,11 +509,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcb4451ef2971a4c921c54f3f1da022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 8
   gravity: 10
   maxVelocityChange: 5
   jumpHeight: 1
-  airControl: 0
+  airControl: 10
   grounded: 0
   isJumping: 0
 --- !u!4 &155838996 stripped
@@ -1126,6 +1128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraHeight: 0
   cameraDistance: 0
+  desiredCameraHeight: 0
+  desiredCameraDistance: 0
 --- !u!54 &361319988
 Rigidbody:
   m_ObjectHideFlags: 0

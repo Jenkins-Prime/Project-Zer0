@@ -68,17 +68,18 @@ public class CharacterController : MonoBehaviour
 		{
 			isJumping = true;
 			animator.SetBool("onGround", true);
-			targetVelocity = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
+			targetVelocity = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical")).normalized;
 			targetVelocity *= speed;
+			targetVelocity = Camera.main.transform.TransformDirection(targetVelocity);
 
-			// Apply a force that attempts to reach our target velocity
+
 			velocity = rBody.velocity;
 			velocityChange = (targetVelocity - velocity);
 			velocityChange.x = Mathf.Clamp (velocityChange.x, -maxVelocityChange, maxVelocityChange);
 			velocityChange.z = Mathf.Clamp (velocityChange.z, -maxVelocityChange, maxVelocityChange);
 			velocityChange.y = 0;
+			Rotate(targetVelocity.x, targetVelocity.z);
 			rBody.AddForce(velocityChange, ForceMode.VelocityChange);
-			Rotate (targetVelocity.x, targetVelocity.z);
 
 			if(targetVelocity != Vector3.zero)
 			{
@@ -101,7 +102,7 @@ public class CharacterController : MonoBehaviour
 				Quaternion targetRotation = Quaternion.LookRotation(targetVelocity);
 				Quaternion newRotation = Quaternion.Lerp(rBody.rotation, targetRotation, turnSpeed * Time.deltaTime);
 				rBody.MoveRotation(newRotation);
-				rBody.AddForce(new Vector3 (h * airControl, 0.0f, v * airControl));
+				rBody.AddForce(new Vector3 (h, 0.0f, v));
 			}
 
 			animator.SetFloat("speed", 0.0f);
@@ -109,8 +110,6 @@ public class CharacterController : MonoBehaviour
 		}
 
 	}
-
-
 
 	private void Crouch()
 	{
@@ -133,8 +132,7 @@ public class CharacterController : MonoBehaviour
 	{
 		if(targetVelocity != Vector3.zero)
 		{
-			targetVelocity = new Vector3(horizontal, 0.0f, vertical).normalized;
-			targetVelocity = Camera.main.transform.TransformDirection (targetVelocity);
+			targetVelocity = new Vector3(horizontal, 0.0f, vertical);
 			Quaternion targetRotation = Quaternion.LookRotation(targetVelocity);
 			Quaternion newRotation = Quaternion.Lerp(rBody.rotation, targetRotation, turnSpeed * Time.deltaTime);
 			rBody.MoveRotation(newRotation);
