@@ -509,7 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   gravity: 10
-  maxVelocityChange: 10
+  maxVelocityChange: 5
   jumpHeight: 1
   airControl: 0
   grounded: 0

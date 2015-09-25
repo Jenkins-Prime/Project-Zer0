@@ -38,10 +38,10 @@ public class CharacterController : MonoBehaviour
 
 	void Start()
 	{
-		speed = 3.0f;
+		speed = 5.0f;
 		gravity = 10.0f;
 		maxVelocityChange = 10.0f;
-		jumpHeight = 2.0f;
+		jumpHeight = 0.5f;
 		airControl = 3.0f;
 		turnSpeed = 50.0f;
 		slopeLimit = 50.0f;
@@ -66,10 +66,10 @@ public class CharacterController : MonoBehaviour
 	{
 		if (grounded) 
 		{
+			isJumping = true;
 			animator.SetBool("onGround", true);
-			targetVelocity = new Vector3 (Input.GetAxis ("Horizontal") * Time.deltaTime, 0, Input.GetAxis ("Vertical") * Time.deltaTime).normalized;
+			targetVelocity = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
 			targetVelocity *= speed;
-
 
 			// Apply a force that attempts to reach our target velocity
 			velocity = rBody.velocity;
@@ -77,8 +77,7 @@ public class CharacterController : MonoBehaviour
 			velocityChange.x = Mathf.Clamp (velocityChange.x, -maxVelocityChange, maxVelocityChange);
 			velocityChange.z = Mathf.Clamp (velocityChange.z, -maxVelocityChange, maxVelocityChange);
 			velocityChange.y = 0;
-			rBody.AddForce (velocityChange, ForceMode.VelocityChange);
-			isJumping = true;
+			rBody.AddForce(velocityChange, ForceMode.VelocityChange);
 			Rotate (targetVelocity.x, targetVelocity.z);
 
 			if(targetVelocity != Vector3.zero)
@@ -148,6 +147,7 @@ public class CharacterController : MonoBehaviour
 	{
 		if (Input.GetButtonDown("Jump") && isJumping) 
 		{
+			animator.SetBool("onGround", false);
 			rBody.velocity = new Vector3 (0, CalculateJumpVerticalSpeed (), 0);
 			isJumping = false;
 		}
@@ -155,9 +155,6 @@ public class CharacterController : MonoBehaviour
 		{
 			rBody.AddForce(new Vector3 (0, -gravity * rBody.mass, 0));
 		}
-
-		
-
 	}
 	
 	void OnCollisionStay(Collision collision)
@@ -174,13 +171,11 @@ public class CharacterController : MonoBehaviour
 	void OnCollisionExit()
 	{
 		grounded = false;
-		isInAir = true;
 	}
 
 	
-	float CalculateJumpVerticalSpeed () 
+	private float CalculateJumpVerticalSpeed () 
 	{
-
 		return Mathf.Sqrt(2 * jumpHeight * gravity);
 	}
 }
