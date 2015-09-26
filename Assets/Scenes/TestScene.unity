@@ -984,34 +984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sparkieIndex: 0
---- !u!1 &334371722
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1286926096}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 334371723}
-  m_Layer: 0
-  m_Name: Missing Prefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &334371723
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1286926096}
-  m_GameObject: {fileID: 334371722}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1071847997}
-  m_Father: {fileID: 900261188}
-  m_RootOrder: 0
 --- !u!1 &340234077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,7 +2576,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 334371723}
+  - {fileID: 1071847997}
   - {fileID: 1488321266}
   m_Father: {fileID: 1510071158}
   m_RootOrder: 1
@@ -3386,18 +3358,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1068908404}
---- !u!4 &1071847997
+--- !u!4 &1071847997 stripped
 Transform:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400006, guid: 86e7c8ce0ce79fe4788888eea7a2cdef, type: 3}
   m_PrefabInternal: {fileID: 1286926096}
-  m_GameObject: {fileID: 1974175136}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 334371723}
-  m_RootOrder: 0
 --- !u!1001 &1147903054
 Prefab:
   m_ObjectHideFlags: 0
@@ -6090,6 +6054,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5444864, guid: b658fb847510e5b478ae86ebf222fd76, type: 2}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b658fb847510e5b478ae86ebf222fd76, type: 2}
   m_IsPrefabParent: 0
@@ -6189,21 +6157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sparkieIndex: 2
---- !u!1 &1974175136
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1286926096}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1071847997}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1993422932
 GameObject:
   m_ObjectHideFlags: 0

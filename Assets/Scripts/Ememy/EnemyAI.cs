@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class EnemyAI : MonoBehaviour {
+    [Header("Speed Settings:")]
 	public float patrolSpeed = 1f;
 	public float chaseSpeed = 2f;
 	public float rotationSpeed = 3f;
-	public float sightRange = 5f;
-	public float patrolRadius = 5f;
-	public float chaseRange = 10f;
+    [Header("Movement Radius:")]
+    public float patrolRadius = 5f;
+    public float chaseRadius = 10f;
+    [Header("Behavior Settings:")]
+    public float sightRange = 5f;		
+    public float attackRange = 2f;
 	
 	Rigidbody rb;
 	Animator anim;
@@ -41,27 +45,26 @@ public class EnemyAI : MonoBehaviour {
 
 	void FixedUpdate() {
 		if (!pauseMotion) {
-			float distFromCenter = Vector3.Distance (transform.position, waypoints [0]);
-			
-			if (returnBack) {
-				if(distFromCenter < chaseRange - sightRange) {
-					returnBack = false;
-				} else {
-					MoveAtTarget(waypoints[0], patrolSpeed);
-				}
-			} else {
-				if (distFromCenter < chaseRange) {
-					if (Vector3.Distance (transform.position, player.position) < sightRange) {
-						MoveAtTarget(player.position, chaseSpeed);
-						playerSpotted = true;
+            float distFromCenter = Vector3.Distance(transform.position, waypoints[0]);
+            float distFromPlayer = Vector3.Distance(transform.position, player.position);
+
+            if (returnBack) {
+                ReturnBack();
+            } else {
+				if (distFromCenter < chaseRadius) {
+                    if (distFromPlayer < attackRange) {
+                        Attack();
+                    } else if (distFromPlayer < sightRange) {
+                        playerSpotted = true;
+                        MoveAtTarget(player.position, chaseSpeed);						
 					} else {
-						Patrol();
-						playerSpotted = false;
+                        playerSpotted = false;
+                        Patrol();						
 					}
-				} else {
-					MoveAtTarget(waypoints[0], patrolSpeed);
+				} else {					
 					playerSpotted = false;
 					returnBack = true;
+                    ReturnBack();
 				}
 			}
 			anim.SetBool ("PlayerSpotted", playerSpotted);
@@ -81,6 +84,21 @@ public class EnemyAI : MonoBehaviour {
 			}
 		}
 	}
+
+    void ReturnBack() {
+        if (Vector3.Distance(transform.position, waypoints[0]) < chaseRadius - sightRange) {
+            returnBack = false;
+        } else {
+            MoveAtTarget(waypoints[0], patrolSpeed);
+        }
+    }
+
+    void Attack() {
+       // pauseMotion = true;
+        anim.SetTrigger("Attack");
+        //Dive
+        rb.velocity = (transform.forward * 2 * chaseSpeed) + (transform.up * 3); //Change this
+    }
 
 	void MoveAtTarget(Vector3 target, float speed) {
 		Quaternion targetRotation = Quaternion.LookRotation(target - transform.position);
@@ -106,7 +124,7 @@ public class EnemyAI : MonoBehaviour {
 			Gizmos.DrawWireSphere (waypoints[3], 0.2f);
 			Gizmos.DrawWireSphere (waypoints[4], 0.2f);
 			Gizmos.color = Color.red;
-			Gizmos.DrawWireSphere (waypoints[0], chaseRange);
+			Gizmos.DrawWireSphere (waypoints[0], chaseRadius);
 		}
 	}
 }
