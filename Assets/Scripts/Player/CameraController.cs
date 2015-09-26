@@ -47,7 +47,7 @@ public class CameraController : MonoBehaviour
 		desiredCameraDistance = 1.03f;
 		rayDistance = 1.0f;
 		cameraZoomHeight = 1.0f;
-		cameraZoomDistance = 0.01f;
+		cameraZoomDistance = 0.1f;
 		cameraZoomXDistance = 2.042f;
 
 		mouseX = 0.0f;
