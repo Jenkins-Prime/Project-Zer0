@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 	public GameObject scrapUI;
 	public GameObject ammoUI;
 	public GameObject menu;
+	public GameObject target;
 
 	void Start()
 	{
@@ -16,6 +17,7 @@ public class UIManager : MonoBehaviour
 		scrapUI.SetActive (false);
 		ammoUI.SetActive (false);
 		menu.SetActive(false);
+		target.SetActive (false);
 
 	}
 
@@ -57,6 +59,16 @@ public class UIManager : MonoBehaviour
 	public void HideAmmo()
 	{
 		ammoUI.SetActive (false);
+	}
+
+	public void ShowTarget()
+	{
+		target.SetActive (true);
+	}
+	
+	public void HideTarget()
+	{
+		target.SetActive (false);
 	}
 
 	public void ShowMenu()

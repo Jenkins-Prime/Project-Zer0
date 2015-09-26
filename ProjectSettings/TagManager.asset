@@ -11,6 +11,7 @@ TagManager:
   - Scrap
   - Ammo
   - Pivot
+  - Target
   layers:
   - Default
   - TransparentFX
