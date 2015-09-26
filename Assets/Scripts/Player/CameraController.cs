@@ -11,6 +11,8 @@ public class CameraController : MonoBehaviour
 	public float cameraDistance;
 	public float desiredCameraHeight;
 	public float desiredCameraDistance;
+	public float cameraXAxis;
+
 
 	private float rayDistance;
 	private Vector3 desiredPosition;
@@ -25,13 +27,14 @@ public class CameraController : MonoBehaviour
 
 	void Start()
 	{
-		smoothMove = 1.0f;
+		smoothMove = 0.1f;
 		smoothRotate = 100.0f;
 		cameraHeight = 1.0f;
 		desiredCameraHeight = 0.58f;
 		cameraDistance = 3.0f;
 		desiredCameraDistance = 1.03f;
 		rayDistance = 1.0f;
+		cameraXAxis = 3.13f;
 		isRotating = false;
 		isColliding = false;
 
@@ -45,6 +48,11 @@ public class CameraController : MonoBehaviour
 
 		desiredPosition = new Vector3(0.0f, player.position.y + desiredCameraHeight, -desiredCameraDistance);
 		desiredPosition = transform.TransformDirection (desiredPosition);
+
+		if(Input.GetKeyDown (KeyCode.Y))
+		{
+			isColliding = false;
+		}
 
 	}
 
