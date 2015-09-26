@@ -103,7 +103,7 @@ public class CameraController : MonoBehaviour
 	
 	private void FollowPlayer()
 	{
-		if(!isColliding || !isZoomed)
+		if(!isColliding)
 		{
 			transform.position = Vector3.Lerp (transform.position, player.position + originalPosition, smoothMove);
 			originalPosition = transform.position - player.position;
