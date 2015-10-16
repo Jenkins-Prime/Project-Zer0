@@ -8,3 +8,9 @@
 * Joshmond
  - Create Character controller
  - Create Camera controller
+
+
+* Zipp (Joshua)
+ - U.I
+ - Pause Screen
+ - "Totals" menu
