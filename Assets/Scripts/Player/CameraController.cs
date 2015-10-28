@@ -41,9 +41,9 @@ public class CameraController : MonoBehaviour
 	{
 		smoothMove = 0.1f;
 		smoothRotate = 100.0f;
-		cameraHeight = 1.0f;
+		cameraHeight = -10.81f;
 		desiredCameraHeight = 0.58f;
-		cameraDistance = 3.0f;
+		cameraDistance = 15.41f;
 		desiredCameraDistance = 1.03f;
 		rayDistance = 1.0f;
 		cameraZoomHeight = 1.0f;
