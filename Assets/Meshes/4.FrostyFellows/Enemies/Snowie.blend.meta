@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ade8baa084162204ebedb07f1ea7f509
-timeCreated: 1442246418
+timeCreated: 1445334761
 licenseType: Pro
 ModelImporter:
   serializedVersion: 18
@@ -10,50 +10,56 @@ ModelImporter:
     100004: Body_0
     100006: Boots
     100008: Buttons
-    100010: Buttons_MeshPart0
-    100012: Buttons_MeshPart1
-    100014: Control
-    100016: Foot_L
-    100018: Foot_R
-    100020: Head
-    100022: Head_0
-    100024: Leg_L
-    100026: Leg_R
-    100028: //RootNode
+    100010: Col_Body
+    100012: Col_head
+    100014: Colliders
+    100016: Control
+    100018: Foot_L
+    100020: Foot_R
+    100022: Head
+    100024: Head_0
+    100026: Leg_L
+    100028: Leg_R
+    100030: //RootNode
     400000: Armature
     400002: Body
     400004: Body_0
     400006: Boots
     400008: Buttons
-    400010: Buttons_MeshPart0
-    400012: Buttons_MeshPart1
-    400014: Control
-    400016: Foot_L
-    400018: Foot_R
-    400020: Head
-    400022: Head_0
-    400024: Leg_L
-    400026: Leg_R
-    400028: //RootNode
+    400010: Col_Body
+    400012: Col_head
+    400014: Colliders
+    400016: Control
+    400018: Foot_L
+    400020: Foot_R
+    400022: Head
+    400024: Head_0
+    400026: Leg_L
+    400028: Leg_R
+    400030: //RootNode
+    2300000: Col_Body
+    2300002: Col_head
+    3300000: Col_Body
+    3300002: Col_head
     4300000: Body
-    4300002: Buttons_MeshPart0
-    4300004: Buttons_MeshPart1
-    4300006: Boots
-    4300008: Head
+    4300002: Buttons
+    4300004: Boots
+    4300006: Head
+    4300008: Col_head
+    4300010: Col_Body
     7400000: Default Take
-    7400002: Snowie@Attack
-    7400004: Snowie@Die
-    7400006: Snowie@PlayerSpotted
-    7400008: Snowie@Hurt
-    7400010: Snowie@Idle
-    7400012: Snowie@Run
-    7400014: Snowie@Walk
+    7400002: Snowie_Attack
+    7400004: Snowie_Die
+    7400006: Snowie_EnemySpotted
+    7400008: Snowie_Hurt
+    7400010: Snowie_Idle
+    7400012: Snowie_Run
+    7400014: Snowie_Walk
     9500000: //RootNode
     13700000: Body
     13700002: Boots
-    13700004: Buttons_MeshPart0
-    13700006: Buttons_MeshPart1
-    13700008: Head
+    13700004: Buttons
+    13700006: Head
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,455 +79,7 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Snowie@Attack
-      takeName: Attack
-      firstFrame: 0
-      lastFrame: 36
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events:
-      - time: .994901955
-        functionName: PauseMotion
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 3
-        messageOptions: 0
-      - time: .299746633
-        functionName: PauseMotion
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0
-        functionName: PauseMotion
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 1
-        messageOptions: 0
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Control
-        weight: 1
-      - path: Armature/Control/Body_0
-        weight: 1
-      - path: Armature/Control/Body_0/Head_0
-        weight: 1
-      - path: Armature/Control/Leg_L
-        weight: 1
-      - path: Armature/Control/Leg_L/Foot_L
-        weight: 1
-      - path: Armature/Control/Leg_R
-        weight: 1
-      - path: Armature/Control/Leg_R/Foot_R
-        weight: 1
-      - path: Body
-        weight: 1
-      - path: Boots
-        weight: 1
-      - path: Buttons
-        weight: 1
-      - path: Buttons/Buttons_MeshPart0
-        weight: 1
-      - path: Buttons/Buttons_MeshPart1
-        weight: 1
-      - path: Head
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Snowie@Die
-      takeName: Die
-      firstFrame: 0
-      lastFrame: 20
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Control
-        weight: 1
-      - path: Armature/Control/Body_0
-        weight: 1
-      - path: Armature/Control/Body_0/Head_0
-        weight: 1
-      - path: Armature/Control/Leg_L
-        weight: 1
-      - path: Armature/Control/Leg_L/Foot_L
-        weight: 1
-      - path: Armature/Control/Leg_R
-        weight: 1
-      - path: Armature/Control/Leg_R/Foot_R
-        weight: 1
-      - path: Body
-        weight: 1
-      - path: Boots
-        weight: 1
-      - path: Buttons
-        weight: 1
-      - path: Buttons/Buttons_MeshPart0
-        weight: 1
-      - path: Buttons/Buttons_MeshPart1
-        weight: 1
-      - path: Head
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Snowie@PlayerSpotted
-      takeName: EnemySpotted
-      firstFrame: 0
-      lastFrame: 24
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events:
-      - time: 0
-        functionName: PauseMotion
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 1
-        messageOptions: 0
-      - time: .992494047
-        functionName: PauseMotion
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Control
-        weight: 1
-      - path: Armature/Control/Body_0
-        weight: 1
-      - path: Armature/Control/Body_0/Head_0
-        weight: 1
-      - path: Armature/Control/Leg_L
-        weight: 1
-      - path: Armature/Control/Leg_L/Foot_L
-        weight: 1
-      - path: Armature/Control/Leg_R
-        weight: 1
-      - path: Armature/Control/Leg_R/Foot_R
-        weight: 1
-      - path: Body
-        weight: 1
-      - path: Boots
-        weight: 1
-      - path: Buttons
-        weight: 1
-      - path: Buttons/Buttons_MeshPart0
-        weight: 1
-      - path: Buttons/Buttons_MeshPart1
-        weight: 1
-      - path: Head
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Snowie@Hurt
-      takeName: Hurt
-      firstFrame: 0
-      lastFrame: 32
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Control
-        weight: 1
-      - path: Armature/Control/Body_0
-        weight: 1
-      - path: Armature/Control/Body_0/Head_0
-        weight: 1
-      - path: Armature/Control/Leg_L
-        weight: 1
-      - path: Armature/Control/Leg_L/Foot_L
-        weight: 1
-      - path: Armature/Control/Leg_R
-        weight: 1
-      - path: Armature/Control/Leg_R/Foot_R
-        weight: 1
-      - path: Body
-        weight: 1
-      - path: Boots
-        weight: 1
-      - path: Buttons
-        weight: 1
-      - path: Buttons/Buttons_MeshPart0
-        weight: 1
-      - path: Buttons/Buttons_MeshPart1
-        weight: 1
-      - path: Head
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Snowie@Idle
-      takeName: Idle
-      firstFrame: 0
-      lastFrame: 32
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events:
-      - time: 0
-        functionName: PauseMotion
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 1
-        messageOptions: 0
-      - time: .99912113
-        functionName: PauseMotion
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Control
-        weight: 1
-      - path: Armature/Control/Body_0
-        weight: 1
-      - path: Armature/Control/Body_0/Head_0
-        weight: 1
-      - path: Armature/Control/Leg_L
-        weight: 1
-      - path: Armature/Control/Leg_L/Foot_L
-        weight: 1
-      - path: Armature/Control/Leg_R
-        weight: 1
-      - path: Armature/Control/Leg_R/Foot_R
-        weight: 1
-      - path: Body
-        weight: 1
-      - path: Boots
-        weight: 1
-      - path: Buttons
-        weight: 1
-      - path: Buttons/Buttons_MeshPart0
-        weight: 1
-      - path: Buttons/Buttons_MeshPart1
-        weight: 1
-      - path: Head
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Snowie@Run
-      takeName: Run
-      firstFrame: 0
-      lastFrame: 12
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Control
-        weight: 1
-      - path: Armature/Control/Body_0
-        weight: 1
-      - path: Armature/Control/Body_0/Head_0
-        weight: 1
-      - path: Armature/Control/Leg_L
-        weight: 1
-      - path: Armature/Control/Leg_L/Foot_L
-        weight: 1
-      - path: Armature/Control/Leg_R
-        weight: 1
-      - path: Armature/Control/Leg_R/Foot_R
-        weight: 1
-      - path: Body
-        weight: 1
-      - path: Boots
-        weight: 1
-      - path: Buttons
-        weight: 1
-      - path: Buttons/Buttons_MeshPart0
-        weight: 1
-      - path: Buttons/Buttons_MeshPart1
-        weight: 1
-      - path: Head
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Snowie@Walk
-      takeName: Walk
-      firstFrame: 0
-      lastFrame: 24
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events:
-      - time: 0
-        functionName: PauseMotion
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Control
-        weight: 1
-      - path: Armature/Control/Body_0
-        weight: 1
-      - path: Armature/Control/Body_0/Head_0
-        weight: 1
-      - path: Armature/Control/Leg_L
-        weight: 1
-      - path: Armature/Control/Leg_L/Foot_L
-        weight: 1
-      - path: Armature/Control/Leg_R
-        weight: 1
-      - path: Armature/Control/Leg_R/Foot_R
-        weight: 1
-      - path: Body
-        weight: 1
-      - path: Boots
-        weight: 1
-      - path: Buttons
-        weight: 1
-      - path: Buttons/Buttons_MeshPart0
-        weight: 1
-      - path: Buttons/Buttons_MeshPart1
-        weight: 1
-      - path: Head
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

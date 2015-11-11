@@ -6,6 +6,11 @@ public class EnemyStatus : MonoBehaviour {
         Ground, Flying, Swimming
     }
     public EnemyType enemyType;
+
+    public enum AttackType {
+        None, Basic, Dive
+    }
+    public AttackType attackType;
     public int health;
     
 

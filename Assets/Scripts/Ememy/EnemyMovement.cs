@@ -19,18 +19,19 @@ public class EnemyMovement : MonoBehaviour {
     [SerializeField]
     float sightRange = 5f;
     [SerializeField]
-    float attackRange = 2f;    
+    float attackRange = 2f;
 
+    public bool isAttacking;
     Rigidbody rb;
     Animator anim;
     Transform player;
+    EnemyStatus eStatus;
     EnemyAttack eAttack;
     List<Vector3> waypoints = new List<Vector3>();
     int currentPoint;
     float reachDist = 1.0f;    
     bool pauseMotion;
-    bool playerSpotted;
-    bool isAttacking;
+    bool playerSpotted;    
     bool returnBack;
     enum EnemyState {
         Patrol,
@@ -43,6 +44,7 @@ public class EnemyMovement : MonoBehaviour {
     void Start() {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        eStatus = GetComponent<EnemyStatus>();
         eAttack = GetComponent<EnemyAttack>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //Add waypoints to patrol, Center/N/E/S/W
@@ -58,7 +60,7 @@ public class EnemyMovement : MonoBehaviour {
         returnBack = false;        
     }
 
-    void FixedUpdate () {
+    void FixedUpdate () {        
         if (!pauseMotion) {
             if (!isAttacking) {
                 GetEnemyState();
@@ -69,10 +71,10 @@ public class EnemyMovement : MonoBehaviour {
                 case EnemyState.Patrol:
                     MoveAtTarget(waypoints[currentPoint], patrolSpeed);
                     break;
-                case EnemyState.Chase:
+                case EnemyState.Chase:                    
                     MoveAtTarget(player.position, chaseSpeed);
                     break;
-                case EnemyState.Attack:
+                case EnemyState.Attack:                    
                     eAttack.Attack(player.position);
                     break;
                 case EnemyState.Return:
@@ -88,14 +90,14 @@ public class EnemyMovement : MonoBehaviour {
         float distFromCenter = Vector3.Distance(transform.position, waypoints[0]);
         float distFromPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (distFromCenter < chaseRadius && !returnBack) {
-            if (distFromPlayer < attackRange) {
+        if (distFromCenter < chaseRadius && !returnBack) {            
+            if (distFromPlayer < attackRange && eStatus.attackType != EnemyStatus.AttackType.None) {                
                 enemyState = EnemyState.Attack;
                 isAttacking = true;
-                pauseMotion = true;
+                //pauseMotion = true;
                 anim.SetTrigger("Attack");
             }
-            else if (distFromPlayer < sightRange) {
+            else if (distFromPlayer < sightRange) {                
                 playerSpotted = true;
                 enemyState = EnemyState.Chase;
             }
@@ -104,10 +106,14 @@ public class EnemyMovement : MonoBehaviour {
                 Patrol();
             }
         }
-        else {
+        else if(Vector3.Distance(player.position, waypoints[0]) < chaseRadius && distFromPlayer < sightRange) {
+            playerSpotted = true;
+            enemyState = EnemyState.Chase;
+        } else {
             playerSpotted = false;
             returnBack = true;
-            ReturnBack();
+            enemyState = EnemyState.Return;
+            ReturnBack();           
         }
     }
 
@@ -116,7 +122,7 @@ public class EnemyMovement : MonoBehaviour {
             enemyState = EnemyState.Patrol;
             anim.SetBool("IsMoving", true);
         }
-        else {
+        else {            
             pauseMotion = true;
             anim.SetBool("IsMoving", false);
             currentPoint++; //Go to next waypoint
@@ -130,27 +136,30 @@ public class EnemyMovement : MonoBehaviour {
         if (Vector3.Distance(transform.position, waypoints[0]) < chaseRadius - sightRange) {
             returnBack = false;
         }
-        else {
+        else {            
             MoveAtTarget(waypoints[0], patrolSpeed);
         }
     }
 
     void MoveAtTarget(Vector3 target, float speed) {
-        Quaternion targetRotation = Quaternion.LookRotation(target - transform.position);
+        Vector3 targetDir = target - transform.position;
+        Quaternion targetRotation = Quaternion.LookRotation(targetDir.normalized);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
-        rb.velocity = transform.forward * speed;
+        rb.velocity =  transform.forward * speed;
     }
-
-    void PauseMotion(int paused) {
+    
+    void PauseMotion(int paused) { //Animation Event function
         if (paused == 0)
             pauseMotion = false;
         else if (paused == 1)
-            pauseMotion = true;
-        else if (paused == 2)
-            isAttacking = true;
-        else {
+            pauseMotion = true;        
+    }
+
+    void TriggerAttack(int attack) { //Animation Event function
+        if (attack == 0)
             isAttacking = false;
-        }
+        else
+            isAttacking = true;
     }
 
     void OnDrawGizmosSelected() {
